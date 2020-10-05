@@ -72,6 +72,12 @@ Works with these Emulation:
 
 8. If mC-Sound was connected after the printer power was turned ON, melody speaker API does not work properly. Please turn on the printer after connecting mC-Sound to it.
 
+9. For users of Ethernet/Wireless LAN interface with mC-Print2/3, TSP100LAN, and TSP100IIILAN/W:
+
+   - To avoid a problem which sometimes fail getPort with Ethernet interface, the appropriate `portSettings` argument of getPort method is required.
+   - Under our test environment, the setting of argument to `;l1000` can avoid this problem.
+   - The appropriate argument is different depending on the environment.
+   - Please check under your own environment and set the appropriate argument.
 
 ## Copyright
 

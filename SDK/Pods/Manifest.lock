@@ -1,13 +1,13 @@
 PODS:
   - SMCloudServices (1.5.1):
     - StarIO_Extension
-  - StarIO (2.8.0)
+  - StarIO (2.8.1)
   - StarIO_Extension (1.15.0):
     - StarIO
 
 DEPENDENCIES:
   - SMCloudServices (= 1.5.1)
-  - StarIO (= 2.8.0)
+  - StarIO (= 2.8.1)
   - StarIO_Extension (= 1.15.0)
 
 SPEC REPOS:
@@ -18,9 +18,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   SMCloudServices: f338ad609ca931a7b19aa5c31bc011f86ef414e3
-  StarIO: 0bac74a0cc8d2ae24cb2b65bba3d27acd6edae27
+  StarIO: dc1605501597e5ce9c4bd147fb375d59a3b00ffd
   StarIO_Extension: 5a76e83aeca040ce99a7d9cab221ba491dc3ed57
 
-PODFILE CHECKSUM: 701474abd9df6473e26cf7401545ae4a2cb3824d
+PODFILE CHECKSUM: 8507dd7787997b3d68270fa76f9c6247f5704968
 
 COCOAPODS: 1.8.4
