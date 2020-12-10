@@ -7,7 +7,7 @@ use_frameworks!
 
 
 # Pods for Swift SDK
-pod 'StarIO', '2.8.1'
+pod 'StarIO', '2.8.2'
 pod 'StarIO_Extension', '1.15.0'
 pod 'SMCloudServices', '1.5.1'
 

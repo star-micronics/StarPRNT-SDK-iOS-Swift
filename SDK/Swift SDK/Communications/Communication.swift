@@ -935,18 +935,18 @@ class Communication {
                     
                     if (receivedData.count >= 2) {
                         for i: Int in 0 ..< Int(receivedData.count - 1) {
-                            if buffer[i + 0] == 0x0a &&
-                               buffer[i + 1] == 0x00 {
+                            if receivedData[i + 0] == 0x0a &&
+                               receivedData[i + 1] == 0x00 {
                                 for j: Int in 0 ..< Int(receivedData.count - 9) {
-                                    if buffer[j + 0] == 0x1b &&
-                                       buffer[j + 1] == 0x1d &&
-                                       buffer[j + 2] == 0x29 &&
-                                       buffer[j + 3] == 0x49 &&
-                                       buffer[j + 6] == 49 {
+                                    if receivedData[j + 0] == 0x1b &&
+                                       receivedData[j + 1] == 0x1d &&
+                                       receivedData[j + 2] == 0x29 &&
+                                       receivedData[j + 3] == 0x49 &&
+                                       receivedData[j + 6] == 49 {
                                         information = ""
                                         
                                         for k: Int in j + 7 ..< Int(receivedData.count) {
-                                            let text: String = String(format: "%c", buffer[k])
+                                            let text: String = String(format: "%c", receivedData[k])
                                             
                                             information += text
                                         }

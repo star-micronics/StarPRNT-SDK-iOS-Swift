@@ -133,6 +133,7 @@
 		E35D90982407CD21004778DD /* AutoSwitchInterfaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSwitchInterfaceViewController.swift; sourceTree = "<group>"; };
 		E3CBF9E5236174270091334C /* HoldPrintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldPrintViewController.swift; sourceTree = "<group>"; };
 		E414DEA2A2ED3293F10686DC /* Pods-Swift SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift SDK.release.xcconfig"; path = "Target Support Files/Pods-Swift SDK/Pods-Swift SDK.release.xcconfig"; sourceTree = "<group>"; };
+		EF3F6AE8256F604F00D7FBA1 /* Swift SDK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Swift SDK.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +169,7 @@
 		6267F7561BDF54D300D02B89 /* Swift SDK */ = {
 			isa = PBXGroup;
 			children = (
+				EF3F6AE8256F604F00D7FBA1 /* Swift SDK.entitlements */,
 				62938F481C782E5E001C50C9 /* AllReceiptsExtViewController.swift */,
 				62E7DF961C76E75D00FC90E3 /* AllReceiptsViewController.swift */,
 				62E558191C8B9F17005EDB8F /* ApiViewController.swift */,
@@ -300,7 +302,7 @@
 		6267F74C1BDF54D300D02B89 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Star Micronics";
 				TargetAttributes = {
 					6267F7531BDF54D300D02B89 = {
@@ -481,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -500,6 +503,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -537,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -556,6 +561,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -588,7 +594,8 @@
 			baseConfigurationReference = D2B30ACA46F8AA47CF0CAAAC /* Pods-Swift SDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = "Swift SDK/Swift SDK.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = MWPD5A288Z;
@@ -599,7 +606,7 @@
 				INFOPLIST_FILE = "Swift SDK/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.14.0;
+				MARKETING_VERSION = 5.14.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.stariosdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -615,7 +622,8 @@
 			baseConfigurationReference = E414DEA2A2ED3293F10686DC /* Pods-Swift SDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = "Swift SDK/Swift SDK.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = MWPD5A288Z;
@@ -626,7 +634,7 @@
 				INFOPLIST_FILE = "Swift SDK/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.14.0;
+				MARKETING_VERSION = 5.14.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.stariosdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

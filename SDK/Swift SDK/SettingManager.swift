@@ -98,7 +98,15 @@ class SettingManager: NSObject {
     }
     
     func save() {
-        let encodedData = NSKeyedArchiver.archivedData(withRootObject: settings)
+
+        let encodedData: Data?
+        
+        if #available(iOS 11.0, *) {
+           encodedData = try? NSKeyedArchiver.archivedData(withRootObject: settings, requiringSecureCoding: false)
+        } else {
+            encodedData = NSKeyedArchiver.archivedData(withRootObject: settings)
+        }
+        
         UserDefaults.standard.set(encodedData, forKey: "setting")
         UserDefaults.standard.synchronize()
     }
@@ -106,7 +114,12 @@ class SettingManager: NSObject {
     func load() {
         let optEncodedData = UserDefaults.standard.data(forKey: "setting")
         if let encodedData = optEncodedData {
-            self.settings = NSKeyedUnarchiver.unarchiveObject(with: encodedData) as? [PrinterSetting?] ?? [nil, nil]
+            do{
+                self.settings =  try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(encodedData) as? [PrinterSetting?] ?? [nil,nil]
+            }catch {
+                self.settings = [nil,nil]
+            }
         }
+
     }
 }
