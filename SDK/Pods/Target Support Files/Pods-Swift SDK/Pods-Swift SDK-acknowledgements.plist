@@ -18,16 +18,6 @@
 			<key>License</key>
 			<string>Software License Agreement</string>
 			<key>Title</key>
-			<string>SMCloudServices</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>https://www.starmicronics.com/support/Mannualfolder/SoftwareLicenseAgreement_web.pdf</string>
-			<key>License</key>
-			<string>Software License Agreement</string>
-			<key>Title</key>
 			<string>StarIO</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>

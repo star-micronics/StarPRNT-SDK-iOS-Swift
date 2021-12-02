@@ -96,7 +96,7 @@ class MelodySpeakerViewController: CommonViewController {
             fatalError()
         }
         
-        if printerInfo.title == "mC-Print3" {
+        if printerInfo.title == "mC-Print3" || printerInfo.title == "TSP100IV" {
             melodySpeakerModel = .MCS10
         } else {
             melodySpeakerModel = .FVP10

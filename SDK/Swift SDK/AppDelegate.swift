@@ -71,7 +71,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var emulation:                StarIoExtEmulation!
     var cashDrawerOpenActiveHigh: Bool!
-    var allReceiptsSettings:      Int!
     var selectedIndex:            Int!
     var selectedLanguage:         LanguageIndex!
     var selectedPaperSize:        Int?
@@ -167,15 +166,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     static func setCashDrawerOpenActiveHigh(_ activeHigh: Bool) {
         settingManager.settings[0]?.cashDrawerOpenActiveHigh = activeHigh
-        settingManager.save()
-    }
-    
-    static func getAllReceiptsSettings() -> Int {
-        return settingManager.settings[0]?.allReceiptsSettings ?? 0x07
-    }
-    
-    static func setAllReceiptsSettings(_ allReceiptsSettings: Int) {
-        settingManager.settings[0]?.allReceiptsSettings = allReceiptsSettings
         settingManager.save()
     }
     

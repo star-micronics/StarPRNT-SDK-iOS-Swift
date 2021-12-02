@@ -1,3 +1,26 @@
+# V5.15.0
+
+## StarIO
+- Added features
+  * Added TSP100IV.
+- Changed file format from framework to xcframework.
+- Supported for iOS simulator running on Apple Silicon.
+        
+## StarIOExtension
+- Changed file format from framework to xcframework.
+- Supported for iOS simulator running on Apple Silicon.
+- Fixed an issue where data from peripheral devices (e.g. barcode reader) could not be got after disconnecting and reconnecting a printer to a host device via USB/Bluetooth interfaces.
+
+## SMCloudServices
+- End of support.
+
+## SDK
+- Added Sample Codes
+  * Added TSP100IV.
+
+StarIO (Ver. 2.9.0)  
+StarIO_Extension (Ver. 1.16.0)
+
 # V5.14.2
 
 ## StarIO

@@ -15,7 +15,6 @@ class MainViewController: CommonViewController, UITableViewDelegate, UITableView
         case peripheral
         case combination
         case api
-        case allReceipts
         case deviceStatus
         case bluetooth
         case appendix
@@ -225,14 +224,6 @@ class MainViewController: CommonViewController, UITableViewDelegate, UITableView
                     
                     cell      .textLabel!.textColor = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)
                     cell.detailTextLabel!.textColor = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)
-                case SectionIndex.allReceipts :
-                    cell.backgroundColor = UIColor.white
-                    
-                    cell      .textLabel!.text = "Sample"
-                    cell.detailTextLabel!.text = ""
-                    
-                    cell      .textLabel!.textColor = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)
-                    cell.detailTextLabel!.textColor = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)
                 case SectionIndex.deviceStatus :
                     cell.backgroundColor = UIColor.white
                     
@@ -296,8 +287,6 @@ class MainViewController: CommonViewController, UITableViewDelegate, UITableView
                             userInteractionEnabled = printerInfo.paperPresentStatusIsEnabled
                         case (SectionIndex.printer.rawValue, 6):
                             userInteractionEnabled = printerInfo.autoSwitchInterfaceIsEnabled
-                        case (SectionIndex.allReceipts.rawValue, _):
-                            userInteractionEnabled = printerInfo.AllReceiptsIsEnabled
                         case (SectionIndex.peripheral.rawValue, 0):
                             userInteractionEnabled = printerInfo.cashDrawerIsEnabled
                         case (SectionIndex.peripheral.rawValue, 1),
@@ -383,8 +372,6 @@ class MainViewController: CommonViewController, UITableViewDelegate, UITableView
             title = "Combination"
         case SectionIndex.api :
             title = "API"
-        case SectionIndex.allReceipts :
-            title = "Star Micronics Cloud"
         case SectionIndex.deviceStatus :
             title = "Device Status"
         case SectionIndex.bluetooth :
@@ -518,19 +505,6 @@ class MainViewController: CommonViewController, UITableViewDelegate, UITableView
             })
         case (SectionIndex.api, _):
             self.performSegue(withIdentifier: "PushApiViewController", sender: nil)
-        case (SectionIndex.allReceipts, _):
-            self.showLanguageSelectionAlert(title: "Select language.",
-                                            languages: [.english, .japanese, .french,
-                                                        .portuguese, .spanish, .german],
-                                            completion: { (optSelectedLanguage) in
-                                                guard let selectedLanguage = optSelectedLanguage else {
-                                                    return
-                                                }
-                                                AppDelegate.setSelectedLanguage(selectedLanguage)
-                                                
-                                                self.performSegue(withIdentifier: "PushAllReceiptsViewController",
-                                                                  sender: nil)
-            })
         case (SectionIndex.deviceStatus, 0):
             self.performSegue(withIdentifier: "PushDeviceStatusViewController", sender: nil)
         case (SectionIndex.deviceStatus, 1):
@@ -578,7 +552,6 @@ class MainViewController: CommonViewController, UITableViewDelegate, UITableView
             let message = """
             StarIO version \(SMPort.starIOVersion() ?? "")
             \(StarIoExt.description() ?? "")
-            \(SMCloudServices.description() ?? "")
             """
             
             self.showSimpleAlert(title: "Framework Version",

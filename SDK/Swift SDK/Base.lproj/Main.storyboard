@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="uvt-ev-X7n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="uvt-ev-X7n">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,7 +55,6 @@
                         <segue destination="pIO-2A-tKQ" kind="push" identifier="PushPrinterViewController" id="aFV-3H-5Td"/>
                         <segue destination="DK2-5V-gGD" kind="push" identifier="PushBarcodeReaderExtViewController" id="xqR-7q-z8c"/>
                         <segue destination="dx2-6M-ZnD" kind="push" identifier="PushCombinationViewController" id="mGw-ak-DNW"/>
-                        <segue destination="xwK-cA-SOg" kind="push" identifier="PushAllReceiptsViewController" id="mSi-V3-aQR"/>
                         <segue destination="jwx-Bt-BX0" kind="push" identifier="PushApiViewController" id="ycU-0o-m5y"/>
                         <segue destination="Yqu-wF-0to" kind="push" identifier="PushDeviceStatusViewController" id="tV9-Lw-E2W"/>
                         <segue destination="ils-bt-aXs" kind="push" identifier="PushDisplayViewController" id="Hsm-np-ChY"/>
@@ -800,86 +799,6 @@
             </objects>
             <point key="canvasLocation" x="8079" y="1157"/>
         </scene>
-        <!--Star Micronics Cloud-->
-        <scene sceneID="vTc-uW-1xT">
-            <objects>
-                <viewController id="xwK-cA-SOg" customClass="AllReceiptsViewController" customModule="Swift_SDK" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="g0n-D8-tky"/>
-                        <viewControllerLayoutGuide type="bottom" id="eaU-3r-fnf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8lw-zk-D3Y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LoK-gE-lak">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchTableViewCell" id="FQn-QH-UAd" customClass="SwitchTableViewCell" customModule="Swift_SDK" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FQn-QH-UAd" id="Anh-by-p0p">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhb-Gk-MYb">
-                                                    <rect key="frame" x="12" y="5" width="321" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQH-JU-Xf4">
-                                                    <rect key="frame" x="251" y="6" width="53" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
-                                                    <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <connections>
-                                                        <action selector="valueChangedStateSwitch:" destination="FQn-QH-UAd" eventType="valueChanged" id="SHr-ae-6Xh"/>
-                                                    </connections>
-                                                </switch>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="stateSwitch" destination="QQH-JU-Xf4" id="VgY-0Q-IdO"/>
-                                            <outlet property="titleLabel" destination="zhb-Gk-MYb" id="KBS-8f-vzG"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="xwK-cA-SOg" id="mxJ-xA-IFA"/>
-                                    <outlet property="delegate" destination="xwK-cA-SOg" id="2gF-3R-kxD"/>
-                                </connections>
-                            </tableView>
-                            <view hidden="YES" alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZbZ-nJ-i0O">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PV7-s2-3Aa">
-                                        <rect key="frame" x="142" y="265" width="37" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Star Micronics Cloud" id="drt-xk-brL">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="4uB-Eq-AwD"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="activityIndicatorView" destination="PV7-s2-3Aa" id="Nhc-j0-1Ns"/>
-                        <outlet property="blindView" destination="ZbZ-nJ-i0O" id="oPC-a6-dkW"/>
-                        <outlet property="tableView" destination="LoK-gE-lak" id="tK6-A7-kE0"/>
-                        <segue destination="LQ3-Vp-Ew6" kind="push" identifier="PushAllReceiptsExtViewController" id="FF7-K3-UAD"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bO0-vf-NgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8955" y="1157"/>
-        </scene>
         <!--Device Status-->
         <scene sceneID="Rjl-3e-ZdM">
             <objects>
@@ -1128,60 +1047,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29c-7B-skj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9797" y="1157"/>
-        </scene>
-        <!--Star Micronics Cloud Ext-->
-        <scene sceneID="Opt-lE-AcC">
-            <objects>
-                <viewController id="LQ3-Vp-Ew6" customClass="AllReceiptsExtViewController" customModule="Swift_SDK" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="alr-TT-q3h"/>
-                        <viewControllerLayoutGuide type="bottom" id="Bd3-cs-K3X"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FuQ-8C-jP0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comment" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qY5-oz-AJi">
-                                <rect key="frame" x="20" y="244" width="280" height="80"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2e-Np-2rb">
-                                <rect key="frame" x="190" y="498" width="120" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <state key="normal" title="Print"/>
-                                <connections>
-                                    <action selector="touchUpInsidePrintButton:" destination="LQ3-Vp-Ew6" eventType="touchUpInside" id="8UK-WX-e3m"/>
-                                </connections>
-                            </button>
-                            <view hidden="YES" alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Noy-ke-IEH">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wvx-qN-Nio">
-                                        <rect key="frame" x="142" y="265" width="37" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Star Micronics Cloud Ext" id="hWR-O9-Xh6">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="k50-Ea-eiG"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="activityIndicatorView" destination="wvx-qN-Nio" id="bFh-Vu-nSO"/>
-                        <outlet property="blindView" destination="Noy-ke-IEH" id="2IQ-O8-ejx"/>
-                        <outlet property="commentLabel" destination="qY5-oz-AJi" id="rQY-na-osI"/>
-                        <outlet property="printButton" destination="p2e-Np-2rb" id="Zcb-Jd-4za"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RTz-dl-HMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8955" y="1914"/>
         </scene>
         <!--Display-->
         <scene sceneID="ZXX-Wg-h0U">
@@ -1729,9 +1594,6 @@ Step 3: Disconnect the USB cable and press the Print button.You can automaticall
         <segue reference="6QR-Cy-8y5"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

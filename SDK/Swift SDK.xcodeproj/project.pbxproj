@@ -30,9 +30,7 @@
 		626EAF8F1E68E4E000F268D0 /* BlackMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626EAF8E1E68E4E000F268D0 /* BlackMarkViewController.swift */; };
 		626EAF991E69036200F268D0 /* BlackMarkPasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626EAF981E69036200F268D0 /* BlackMarkPasteViewController.swift */; };
 		6271F5EE1C96269F00BBC1A3 /* CashDrawerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6271F5ED1C96269F00BBC1A3 /* CashDrawerFunctions.swift */; };
-		6271F5F41C96273400BBC1A3 /* AllReceiptsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6271F5F31C96273400BBC1A3 /* AllReceiptsFunctions.swift */; };
 		6271F5F91C96276F00BBC1A3 /* CombinationFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6271F5F81C96276F00BBC1A3 /* CombinationFunctions.swift */; };
-		62938F491C782E5E001C50C9 /* AllReceiptsExtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62938F481C782E5E001C50C9 /* AllReceiptsExtViewController.swift */; };
 		6299169F1C9D1B01000A8CF0 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6299169E1C9D1B01000A8CF0 /* SwitchTableViewCell.swift */; };
 		62BB41851C1CF0AE0098C24F /* ModelCapability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB41841C1CF0AE0098C24F /* ModelCapability.swift */; };
 		62C9451B1C95185500714A1E /* EnglishReceiptsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C9451A1C95185500714A1E /* EnglishReceiptsImpl.swift */; };
@@ -45,7 +43,6 @@
 		62C945291C9518CE00714A1E /* SpanishReceiptsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C945281C9518CE00714A1E /* SpanishReceiptsImpl.swift */; };
 		62C9452B1C9518E000714A1E /* TraditionalChineseReceiptsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C9452A1C9518E000714A1E /* TraditionalChineseReceiptsImpl.swift */; };
 		62E5581A1C8B9F17005EDB8F /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E558191C8B9F17005EDB8F /* ApiViewController.swift */; };
-		62E7DF971C76E75D00FC90E3 /* AllReceiptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7DF961C76E75D00FC90E3 /* AllReceiptsViewController.swift */; };
 		62F34AE31D35EFE60074F37E /* DeviceStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F34AE21D35EFE60074F37E /* DeviceStatusViewController.swift */; };
 		6D3E5A5C22E9452800D12976 /* CommunicationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3E5A5B22E9452800D12976 /* CommunicationResult.swift */; };
 		88011A5B21645C78003E4D22 /* PrinterExtWithConnectAsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88011A5A21645C78003E4D22 /* PrinterExtWithConnectAsyncViewController.swift */; };
@@ -94,11 +91,9 @@
 		626EAF8E1E68E4E000F268D0 /* BlackMarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackMarkViewController.swift; sourceTree = "<group>"; };
 		626EAF981E69036200F268D0 /* BlackMarkPasteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackMarkPasteViewController.swift; sourceTree = "<group>"; };
 		6271F5ED1C96269F00BBC1A3 /* CashDrawerFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashDrawerFunctions.swift; sourceTree = "<group>"; };
-		6271F5F31C96273400BBC1A3 /* AllReceiptsFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReceiptsFunctions.swift; sourceTree = "<group>"; };
 		6271F5F81C96276F00BBC1A3 /* CombinationFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationFunctions.swift; sourceTree = "<group>"; };
 		627BD6261C7C1B59003594D4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		627BD6271C7C1B59003594D4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		62938F481C782E5E001C50C9 /* AllReceiptsExtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReceiptsExtViewController.swift; sourceTree = "<group>"; };
 		6299169E1C9D1B01000A8CF0 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		62BB41841C1CF0AE0098C24F /* ModelCapability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCapability.swift; sourceTree = "<group>"; };
 		62C9451A1C95185500714A1E /* EnglishReceiptsImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishReceiptsImpl.swift; sourceTree = "<group>"; };
@@ -111,7 +106,6 @@
 		62C945281C9518CE00714A1E /* SpanishReceiptsImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpanishReceiptsImpl.swift; sourceTree = "<group>"; };
 		62C9452A1C9518E000714A1E /* TraditionalChineseReceiptsImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraditionalChineseReceiptsImpl.swift; sourceTree = "<group>"; };
 		62E558191C8B9F17005EDB8F /* ApiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
-		62E7DF961C76E75D00FC90E3 /* AllReceiptsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReceiptsViewController.swift; sourceTree = "<group>"; };
 		62F34AE21D35EFE60074F37E /* DeviceStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStatusViewController.swift; sourceTree = "<group>"; };
 		6D3E5A5B22E9452800D12976 /* CommunicationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationResult.swift; sourceTree = "<group>"; };
 		88011A5A21645C78003E4D22 /* PrinterExtWithConnectAsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterExtWithConnectAsyncViewController.swift; sourceTree = "<group>"; };
@@ -170,8 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				EF3F6AE8256F604F00D7FBA1 /* Swift SDK.entitlements */,
-				62938F481C782E5E001C50C9 /* AllReceiptsExtViewController.swift */,
-				62E7DF961C76E75D00FC90E3 /* AllReceiptsViewController.swift */,
 				62E558191C8B9F17005EDB8F /* ApiViewController.swift */,
 				6267F7571BDF54D300D02B89 /* AppDelegate.swift */,
 				6267F75E1BDF54D300D02B89 /* Assets.xcassets */,
@@ -219,7 +211,6 @@
 		6271F5EF1C9626A700BBC1A3 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				6271F5F31C96273400BBC1A3 /* AllReceiptsFunctions.swift */,
 				626C12F61C8E3CE600815FAB /* ApiFunctions.swift */,
 				6271F5ED1C96269F00BBC1A3 /* CashDrawerFunctions.swift */,
 				6271F5F81C96276F00BBC1A3 /* CombinationFunctions.swift */,
@@ -285,7 +276,6 @@
 				6267F7501BDF54D300D02B89 /* Sources */,
 				6267F7511BDF54D300D02B89 /* Frameworks */,
 				6267F7521BDF54D300D02B89 /* Resources */,
-				F8807A8DDE23CAD9C10E7A37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,24 +363,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F8807A8DDE23CAD9C10E7A37 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Swift SDK/Pods-Swift SDK-resources.sh",
-				"${PODS_ROOT}/SMCloudServices/SMCloudServices.framework/Versions/A/Resources/SMCloudServicesResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SMCloudServicesResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift SDK/Pods-Swift SDK-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -402,7 +374,6 @@
 				626EAF991E69036200F268D0 /* BlackMarkPasteViewController.swift in Sources */,
 				62C945251C9518B100714A1E /* RussianReceiptsImpl.swift in Sources */,
 				62C945271C9518BF00714A1E /* SimplifiedChineseReceiptsImpl.swift in Sources */,
-				6271F5F41C96273400BBC1A3 /* AllReceiptsFunctions.swift in Sources */,
 				626C12F71C8E3CE700815FAB /* ApiFunctions.swift in Sources */,
 				62C945291C9518CE00714A1E /* SpanishReceiptsImpl.swift in Sources */,
 				626EAF8F1E68E4E000F268D0 /* BlackMarkViewController.swift in Sources */,
@@ -423,7 +394,6 @@
 				6267F7DE1BDF588F00D02B89 /* BarcodeReaderExtViewController.swift in Sources */,
 				6267F7E11BDF588F00D02B89 /* CombinationExtViewController.swift in Sources */,
 				88A70BFF20C4BC7E00BAC786 /* SettingManager.swift in Sources */,
-				62E7DF971C76E75D00FC90E3 /* AllReceiptsViewController.swift in Sources */,
 				BAE0A9FE1E094275004B490F /* DisplayFunctions.swift in Sources */,
 				BAE0A9F41E09412E004B490F /* DisplayExtViewController.swift in Sources */,
 				BAE0A9F21E09411B004B490F /* DisplayViewController.swift in Sources */,
@@ -449,7 +419,6 @@
 				62C945211C95189400714A1E /* JapaneseReceiptsImpl.swift in Sources */,
 				6271F5EE1C96269F00BBC1A3 /* CashDrawerFunctions.swift in Sources */,
 				62BB41851C1CF0AE0098C24F /* ModelCapability.swift in Sources */,
-				62938F491C782E5E001C50C9 /* AllReceiptsExtViewController.swift in Sources */,
 				62583BF21D338CA1005EFC6C /* GermanReceiptsImpl.swift in Sources */,
 				E3CBF9E6236174270091334C /* HoldPrintViewController.swift in Sources */,
 			);
@@ -598,6 +567,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Swift SDK/Swift SDK.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = MWPD5A288Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -626,6 +596,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Swift SDK/Swift SDK.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = MWPD5A288Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

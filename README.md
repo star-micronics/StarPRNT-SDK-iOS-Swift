@@ -1,19 +1,11 @@
 # StarPRNT SDK iOS Swift
 
-StarIO/StarIO_Extension/SMCloudServices is a library for supporting to develop application for Star printers.
+This package contains StarPRNT SDK for supporting to develop applications for Star printers.
 
 
 ## Scope
 
 Please refer to the [StarPRNT SDK](https://www.star-m.jp/products/s_print/sdk/starprnt_sdk/manual/ios_swift/en/index.html) document about the supported printers.
-
-Works with these Emulation:
-- StarPRNT Mode
-- Star Line Mode
-- Star Graphic Mode
-- ESC/POS
-- ESC/POS Mobile
-- Star Dot Impact
 
 
 ## Limitation
@@ -81,4 +73,4 @@ Works with these Emulation:
 
 ## Copyright
 
-Copyright 2016-2020 Star Micronics Co., Ltd. All rights reserved.
+Copyright 2016-2021 Star Micronics Co., Ltd. All rights reserved.

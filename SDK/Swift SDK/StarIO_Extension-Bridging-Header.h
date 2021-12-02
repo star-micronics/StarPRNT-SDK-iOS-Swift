@@ -16,7 +16,4 @@
 #import <StarIO_Extension/SMBluetoothManagerFactory.h>
 #import <StarIO_Extension/SMSoundSetting.h>
 
-#import <SMCloudServices/SMCloudServices.h>
-#import <SMCloudServices/SMCSAllReceipts.h>
-
 #endif /* StarIO_Extension_Bridging_Header_h */

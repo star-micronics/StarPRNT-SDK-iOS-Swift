@@ -1,10 +1,6 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## SMCloudServices
-
-https://www.starmicronics.com/support/Mannualfolder/SoftwareLicenseAgreement_web.pdf
-
 ## StarIO
 
 https://www.starmicronics.com/support/Mannualfolder/SoftwareLicenseAgreement_web.pdf

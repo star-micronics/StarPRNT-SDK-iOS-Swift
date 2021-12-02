@@ -263,7 +263,6 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
                                 paperSizeIndex: PaperSizeIndex?) {
         if let modelIndex = modelIndex,
             let paperSizeIndex = paperSizeIndex {
-            let allReceiptsSetting = AppDelegate.settingManager.settings[selectedPrinterIndex]?.allReceiptsSettings ?? 0x07
             
             AppDelegate.settingManager.settings[selectedPrinterIndex] = PrinterSetting(portName: portName,
                                                                                        portSettings: portSettings,
@@ -271,7 +270,6 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
                                                                                        modelName: modelName,
                                                                                        emulation: emulation,
                                                                                        cashDrawerOpenActiveHigh: isCashDrawerOpenActiveHigh,
-                                                                                       allReceiptsSettings: allReceiptsSetting,
                                                                                        selectedPaperSize: paperSizeIndex,
                                                                                        selectedModelIndex: modelIndex)
             

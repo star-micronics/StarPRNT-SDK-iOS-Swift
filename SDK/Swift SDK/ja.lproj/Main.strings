@@ -50,12 +50,6 @@
 /* Class = "UIButton"; normalTitle = "Open"; ObjectID = "Y5Q-LA-oEy"; */
 "Y5Q-LA-oEy.normalTitle" = "Open";
 
-/* Class = "UINavigationItem"; title = "Star Micronics Cloud"; ObjectID = "drt-xk-brL"; */
-"drt-xk-brL.title" = "Star Micronics Cloud";
-
-/* Class = "UINavigationItem"; title = "Star Micronics Cloud Ext"; ObjectID = "hWR-O9-Xh6"; */
-"hWR-O9-Xh6.title" = "Star Micronics Cloud Ext";
-
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "k50-Ea-eiG"; */
 "k50-Ea-eiG.title" = "Back";
 

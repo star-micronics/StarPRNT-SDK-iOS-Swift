@@ -21,15 +21,13 @@ class PrinterSetting: NSObject, NSCoding {
     
     var cashDrawerOpenActiveHigh: Bool
     
-    var allReceiptsSettings: Int
-    
     var selectedPaperSize: PaperSizeIndex
     
     var selectedModelIndex: ModelIndex
 
     
     init(portName: String, portSettings: String, macAddress: String, modelName: String,
-         emulation: StarIoExtEmulation, cashDrawerOpenActiveHigh: Bool, allReceiptsSettings: Int,
+         emulation: StarIoExtEmulation, cashDrawerOpenActiveHigh: Bool,
          selectedPaperSize: PaperSizeIndex, selectedModelIndex: ModelIndex) {
         self.portName = portName
         self.portSettings = portSettings
@@ -37,7 +35,6 @@ class PrinterSetting: NSObject, NSCoding {
         self.modelName = modelName
         self.emulation = emulation
         self.cashDrawerOpenActiveHigh = cashDrawerOpenActiveHigh
-        self.allReceiptsSettings = allReceiptsSettings
         self.selectedPaperSize = selectedPaperSize
         self.selectedModelIndex = selectedModelIndex
         
@@ -53,7 +50,6 @@ class PrinterSetting: NSObject, NSCoding {
         self.modelName = aDecoder.decodeObject(forKey: "modelName") as? String ?? ""
         self.emulation = StarIoExtEmulation(rawValue: aDecoder.decodeInteger(forKey: "emulation"))!
         self.cashDrawerOpenActiveHigh = aDecoder.decodeBool(forKey: "cashDrawerOpenActiveHigh")
-        self.allReceiptsSettings = aDecoder.decodeInteger(forKey: "allReceiptsSettings")
         self.selectedPaperSize = PaperSizeIndex(rawValue: aDecoder.decodeInteger(forKey: "selectedPaperSize")) ?? PaperSizeIndex.twoInch
         self.selectedModelIndex = ModelIndex(rawValue: aDecoder.decodeInteger(forKey: "selectedModelIndex")) ?? ModelIndex.none
     }
@@ -65,7 +61,6 @@ class PrinterSetting: NSObject, NSCoding {
         aCoder.encode(modelName, forKey: "modelName")
         aCoder.encode(emulation.rawValue, forKey: "emulation")
         aCoder.encode(cashDrawerOpenActiveHigh, forKey: "cashDrawerOpenActiveHigh")
-        aCoder.encode(allReceiptsSettings, forKey: "allReceiptsSettings")
         aCoder.encode(selectedPaperSize.rawValue, forKey: "selectedPaperSize")
         aCoder.encode(selectedModelIndex.rawValue, forKey: "selectedModelIndex")
     }
@@ -80,7 +75,6 @@ class PrinterSetting: NSObject, NSCoding {
             modelName: \(self.modelName)
             emulation: \(self.emulation.rawValue)
             cashDrawerOpenActiveHigh: \(self.cashDrawerOpenActiveHigh)
-            allReceiptsSettings: \(self.allReceiptsSettings)
             selectedPaperSize: \(self.selectedPaperSize)
             selectedModelIndex: \(self.selectedModelIndex)
         }
