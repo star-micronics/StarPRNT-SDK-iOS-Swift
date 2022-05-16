@@ -1,3 +1,13 @@
+# V5.15.1
+
+## StarIO
+- Added new Bluetooth module information for SM-L200.
+- Fixed an issue that a file is sometimes not overwritten in time order when `SMFileLogger` class outputs more than the number of log files that can be output.
+
+StarIO (Ver. 2.9.1)  
+StarIO_Extension (Ver. 1.16.0)
+
+
 # V5.15.0
 
 ## StarIO
