@@ -1,0 +1,6 @@
+framework module StarIO {
+  umbrella header "StarIO.h"
+
+  export *
+  module * { export * }
+}

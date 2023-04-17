@@ -1,0 +1,453 @@
+===========
+ Changelog
+===========
+    Ver.5.16.0_20230331
+    2023/03/31:
+        [StarIO]
+            - Added features
+                * Added mC-Label3.
+                * SMBluetoothManager : Added SMBluetoothSecuritySSPNumericComparison to SMBluetoothSecurity.
+            - Changed to Embedded Framework from Static Library.
+
+        [StarIOExtension]
+            - Added features
+                * Added mC-Label3.
+            - Changed to Embedded Framework from Static Library.
+            - Framework changed to not include bitcode.
+
+    Ver.5.15.1_20220510
+    2022/05/10:
+        [StarIO]
+            - Added new Bluetooth module information for SM-L200.
+            - Fixed an issue that a file is sometimes not overwritten in time order when SMFileLogger class outputs more than the number of log files that can be output.
+
+    Ver.5.15.0_20211029
+    2021/10/29:
+        [StarIO]
+            - Added features
+                * Added TSP100IV.
+            - Changed file format from framework to xcframework.
+            - Supported for iOS simulator running on Apple Silicon.
+
+        [StarIOExtension]
+            - Changed file format from framework to xcframework.
+            - Supported for iOS simulator running on Apple Silicon.
+            - Fixed an issue where data from peripheral devices (e.g. barcode reader) could not be got after disconnecting and reconnecting a printer to a host device via USB/Bluetooth interfaces.
+
+        [StarIODeviceSetting]
+            - Changed file format from framework to xcframework.
+            - Supported for iOS simulator running on Apple Silicon.
+
+        [SMCloudServices]
+            - End of support
+
+        [SDK]
+            - Added Sample Codes
+                * Added TSP100IV.
+
+    Ver.5.14.2_20201209
+    2020/12/09:
+        [StarIODeviceSetting example]
+            - New
+
+        [StarIODeviceSetting]
+            - New
+
+        [StarIO]
+            - Improvement of getport method for Ethernet printer
+            - Fixed a bug that executing getFirmwareInformation to Bluetooth mobile printers
+              (SM-S210i, SM-220i, SM-S230i, SM-T300i, SM-T400i) could cause an application to be crashed.
+
+    Ver.5.14.1
+    2020/09/17:
+        [Support OS]
+            - Added iOS 14 Support.
+
+        [StarIO]
+            - Improved searchPrinter method performance for the ethernet printer.
+
+    Ver.5.14.0
+    2020/06/17:
+        [StarIO]
+            - Added features
+                * Added MCP31C and TSP650IISK.
+                * Added Auto Interface Select function.
+                * Added Hold Print Control function.
+
+        [StarIOExtension]
+            - Added features
+                * Added MCP31C and TSP650IISK.
+                * Added Auto Interface Select function.
+                * Added Hold Print Control function.
+                * USB HID class (Keyboard mode) support for StarIoExtManager and ISCPParser.
+
+        [SDK]
+            - Added Sample Codes
+                * Added sample codes for Auto Interface Select function.
+                * Added sample codes for Hold Print Control function.
+
+    Ver.5.13.0
+    2019/12/25:
+        [StarIO]
+            - Added features
+                * Improved searchPrinter method performance.
+
+        [SDK]
+            - Changed project structure
+                * CocoaPods support for each library.
+            - End of support Objective-C sample code
+
+        [Manual]
+            - Changed StarPRNT SDK User's Manual from PDF to online manual link
+
+    Ver.5.11.0
+    2019/09/04:
+        [Support OS]
+            - Supported OS version: 9.0 or later
+
+        [StarIO]
+            - Added features
+                * Objective-C/Swift: Added (NSError **)error parameter to getPort method, searchPrinter method、disconnect method.
+                * Added features for error handling
+                    Objective-C/Swift : Get the error code with the code property of the (NSError **)error parameter.
+                    Swift             : Methods to throw Error
+                    Target methods (existing method is deprecated)
+                        getPort
+                        beginCheckedBlock
+                        endCheckedBlock
+                        writePort
+                        readPort
+                        getParsedStatus
+                        getFirmwareInformation
+                        searchPrinter
+                        disconnect
+            - Fixed Bugs
+                * Fixed a bug that function is failed when using Apple AirMac series printer sharing function or HE05/06.
+
+        [StarIOExtension]
+            - Added features
+                * Changed to enable/disable black mark setting of StarPRNT emulation mobile printer with appendBlackMark method.
+
+        [SMCloudServices]
+            - Fixed Bugs
+                * Fixed layout of view displayed by showRegistrationView method.
+
+        [Objective-C SDK and Swift SDK]
+            - Added Sample Codes
+                * Added sample codes for getting the cause of communication failure with the printer.
+            - Support Swift5
+
+    Ver.5.10.1
+    2019/05/23:
+        [StarIO]
+            - Fixed Bugs
+                * Fixed an issue that the app may crash when repeatedly executing the
+                connectAsync method with LAN interface for a printer that does not exist
+                in network.
+
+        [StarIOExtension]
+            - Fixed Bugs
+                * Fixed an issue that the app may crash when repeatedly executing the
+                connectAsync method with LAN interface for a printer that does not exist
+                in network.
+                * Fixed the memory leak occurred when executing createBcrConnectParser,
+                createDisplayConnectParser or createMelodySpeakerConnectParser method.
+
+    Ver.5.10.0
+    2019/03/07:
+        [StarIO]
+            - Improvement
+                * Reduce the waiting time to start printing for Bluetooth printers
+                (except SM-L200 and SM-L300) in StarLine and StarPRNT emulation.
+
+        [StarIOExtension]
+            - Added features
+                * Added appendCjkUnifiedIdeographFont method.
+                It allows you to specify the priority of CJK integrated Kanji font in UTF-8.
+                Supported printer: TSP650II(JP2/TW) with firmware version 4.0 or later,
+                mC-Print2 and mC-Print3
+                * Added ExtMode which specifies the barcode mode (symbol width) conforming to
+                each command specification to SCBBarcodeWidth.
+            - Fixed Bugs
+                * On the LAN interface, SMResultCodeInUseError may be returned if you try to
+                connect to a device other than Star printer via the connectAsync method of
+                the StarIoExtManager class.
+                Fixed to return SMResultCodeFailedError.
+                * Fixed a bug that the appendBitmap method may append garbage data at the end
+                of graphic in StarLine emulation.
+                * Fixed a bug that the print start position on the horizontal axis is not set
+                to the head of the line even if 0 is specified for the position in the
+                appendBitmapWithAbsolutePosition method in page mode.
+
+        [Objective-C SDK and Swift SDK]
+            - Changed sample code
+                * Changed the implementation of printing the sample of CJK unified ideographs
+                in UTF-8 to use the appendCjkUnifiedIdeographFont method.
+
+    Ver.5.9.2
+    2018/12/17:
+        [StarIO]
+            - getPort API
+                * Improve connectivity when continuously connecting via Ethernet/Wireless LAN
+                interface with mC-Print2/3, TSP100LAN, and TSP100IIILAN/W.
+
+        [StarIOExtension]
+            - Fixed a bug
+                * Fixed a bug that the didAccessoryDisconnect method of the StarIoExtManagerDelegate
+                protocol might be called even though the target printer is not disconnected after
+                the connect method of the StarIoExtManager class was called.
+
+    Ver.5.9.1
+    2018/11/28:
+        [StarIO]
+            - Bug Fix.
+                * Fixed an issue that build failed due to duplicated symbol error
+                when -all_load is set in Other Linker Flags of Build Settings.
+
+    Ver.5.9.0
+    2018/11/20:
+            [StarIO]
+                - Added features.
+                    * Added some log output.
+                - Bug Fix.
+                    * Fixed a bug that the getPort method may not wait until specified timeout
+                    on the LAN interface even though the "l" option is set.
+
+            [StarIOExtension]
+                - Added features.
+                    * Added API for Melody Speaker control.
+                - Bug Fix.
+                    * Fixed a bug that the error code returned by the didFailToConnectPort method might be incorrect.
+
+            [SDK]
+                - Add Sample Code.
+                    * Added sample codes for Melody Speaker control.
+
+    Ver.5.8.0
+    2018/10/18:
+        [StarIO]
+            - Added log function.
+
+        [StarIOExtension]
+            - Added log function.
+            - Added 'connectAsync' method to StarIoExtManager class.
+            - Bug Fix:
+            - [Bluetooth, Lightning]
+                When the connect method is executed and the printer is turned on / off,
+                some events may not occur.
+
+        [StarPRNT SDK]
+            - Added Xcode 10 support.
+            - Added sample code of connectAsync API.
+            - Bug Fix:
+            - When the barcode reader is set to add LF to the scanned data,
+            the application crashes after scanning the barcode.
+
+    Ver.5.7.0
+    2018/06/29:
+        [StarIO]
+            - Fixed the Objective-C API which caused an application crash when called
+            from Swift, so that it cannot be called from Swift.
+            - Bug Fix:
+            - In case of using mC-Print with LAN interface, beginCheckBlock failed
+            if it was used while a printer was in error condition.
+            - Garbage data was sometimes attached at the end of the return value
+            by getFirmwareInformation method.
+            - The application sometimes crashed while getting data from barcode reader.
+
+        [StarIOExtension]
+            - End of support
+            - StarIoExt class
+                - createScaleCommandBuilder Method
+                - createScaleConnectParser Method
+                - createScaleWeightParser Method
+            - StarIoExtScaleModel Constants
+            - ISSCBBuilder class
+            - ISCPParser class
+                - createReceiveCommands Method
+            - ISSCWeightParser class
+
+        [SMCloudServices]
+            - Added features
+            - SMCloudServices.ShowRegistrationWindow Method
+            When the password of SCS dash board is changed, you can update local password too.
+
+        [SDK]
+            - Added sample codes for Print Re-Direction.
+            - Changed UIAlertView to UIAlertController.
+
+    Ver.5.6.0
+    2018/05/21:
+        [StarIO]
+            - Added features
+            - Added mC-Print2 and mC-Print3.
+            - Added options to portSettings of getPort method.
+            - Added the connectedInterface property to starPrinterStatus structure.
+            - getPort API
+            - Change the behavior of getPort method for specify ESC/POS emulation.
+                Before : portName specified "TCP: xxx" and portSettings contains "portable".
+                After :  portName specified "TCP: xxx" and portSettings contains "portable" and “escpos”.
+            - Added a feature to specify the serial number of the printer after "BT:", "USB:" of portName.
+            - readPort API
+            - Change the behavior of readPort method if there was no data to receive in the ethernet interface.
+                Before : Method throws the exception.
+                After: Method returns success.
+            - Fixed Bugs:
+            - Fixed a bug that communication fails immediately after the printer returns from an error on the USB interface.
+            - Fixed a bug that apply: method of SMBluetoothManager class returns NO (failed) despite it success on the StarPRNT emulation.
+            - Fixed a bug that caused a link error with other companies libraries.
+
+        [StarIOExtension]
+        - Added features
+        - Added method for setting top margin.
+        - Added method for setting printable area.
+        - Added drive time parameter and delay time parameter to the appendSound method.
+
+    Ver.5.5.0
+    2018/02/06:
+        [StarIO]
+            - Changed to be able to get the firmware version of TSP100IIILAN and TSP100IIIW
+                with the getFirmwareInformation method.
+            - Fixed a bug that when TSP100IIIU and TSP100IIIBI are connected to iOS device
+                at the same time, printing may be performed from TSP100IIIU despite printing to
+                TSP100IIIBI.
+            - Changed to return an error by detecting the disconnection on Bluetooth and USB
+                interfaces in the getParsedStatus, beginCheckedBlock and endCheckedBlock methods.
+
+        [StarIO_Extension.framework]
+        - Added method for setting or clearing horizontal tab.
+
+        [Objective-C SDK and Swift SDK]
+        - Added Sample Codes.
+            * Implementation of the CJK unified ideographs printing sample under UTF-8.
+            (Supported by TSP650II(JP2/TW) with firmware version 4.0 or later only)
+
+    Ver.5.4.1
+    2017/10/20:
+        [Support OS]
+            - Added iOS 11 Support.
+
+        [StarIO.framework]
+            - Improved reliability of BLE 's getPort method.
+            - [ESC/POS mode + LAN] Bug Fix: When a printer error occurs during printing,
+            the endCheckedBlock API throws an exception.
+
+        [StarIO_Extension.framework]
+            - iOS 11
+                - Bug Fix: Printer may not be recognized.
+
+        [SMCloudServices.framework]
+            - iOS 11
+                - Bug Fix: The close button is displayed larger than the original size
+
+        [Objective-C SDK and Swift SDK]
+            - iOS 11
+                - Bug Fix: Printer may not be recognized.
+                - Bug Fix: Crash when you set the in-flight mode while printing on partial screen.
+            - Changed to show "Print photo from Library" and "Print Photo by Camera" when SP700 is selected.
+            - Enabled "Pairing and Connect Bluetooth" when printer is not selected.
+
+    Ver.5.4.0
+    2017/08/16:
+        [Support OS]
+            - Supported OS version: 8.0 or later.
+
+        [StarIO]
+            - Improved communication reliability with SM-T300DW.
+
+        [StarIO_Extension.framework]
+            - Added API for Scale, Display control
+            - Added graphic data compression function for SM-L series.
+
+        [Objective-C SDK and Swift SDK]
+            - Added sample codes for getting serial number, Firmware version and Framework version,
+            and setting Bluetooth.
+
+        [Swift SDK]
+            - Changed the Bundle ID from jp.star-m.Swift-SDK to jp.star-m.stariosdk.
+            If you have already installed Ver 5.3.0, Ver 5.4.0 will be installed as the other app.
+
+    Ver.5.3.0
+    2017/04/03:
+        [StarIO]
+            - Added support of TSP100IIIU and SM-L300(Bluetooth Low Energy).
+            - The performance when the getPort method failed on Ethernet was improved.
+
+        [Objective-C SDK and Swift SDK]
+            - Add Sample Code.
+                * Implementation of BlackMark and PageMode.
+
+        [Swift SDK]
+            - Supported Swift3.
+
+    Ver.5.2.1
+    2017/02/08:
+        [StarIO]
+            - Bug Fix.
+                * Fixed bluetooth communication failure with portable printer when portable printer is ESC/POS and in Sniff Mode.
+
+    Ver.5.2.0
+    2017/01/19:
+        [StarIO]
+            - Bug Fix.
+                * The apply method in SMBluetoothManager class is failed to perform for mobile printer and mPOP.
+                * Debug communication failure while Bluetooth printer in Sniff Mode.
+            - iOS 9
+                * Debug failure in API which was generated after getPort.
+            - iOS 10
+                * Fixed problem in SM-S210i, SM-S220i, SM-T300i and SM-T400i, when Raster data is printed out
+                printing succeeds at the first time, but failed from the second time.
+                * Fixed problem in SM-L200, when getPort is performed immediately after releasePort, it takes time to
+                connect an it fails in the connection according to the value of time out.
+
+        [StarIO_Extension]
+            - Bug Fix.
+                * Modify both of connect/disconnect method in StarIoExtManager class, not be reentrant.
+
+        [SMCloudServices]
+            - Version up.
+                * Added the uploadData method to the SMCSAllReceipts class.
+                Data which is transmitted by uploadData method is rendered to digital receipt image by Command Emulator on SMCS.
+                Refer to "CommandEmulator_on_SMCS_En.pdf" for details.
+                * Added the MicroReceipt function.
+                MicroReceipts function would be  helpful of reduce a running paper cost.
+
+        [Objective-C SDK and Swift SDK]
+            - Add Sample Code.
+                * Implementation of the AllReceipts support on StarPRNT, StarLine and ESC/POS.
+                * Implementation of USB peripherals (2D barcode reader and scale) available at mPOP.
+            - Add supported command lists of AllReceipts command emulator.
+
+    Ver.5.0.2
+    2016/08/25:
+        [StarIO]
+            - Fixed an issue where the connected property and getOnlineStatus method does not work
+            in the mobile printer that is set to StarPRNT emulation.
+
+    Ver.5.0.1
+    2016/08/11:
+        [Objective-C SDK and Swift SDK]
+            - Add Sample Code.
+                * Printing of camera and photo library.
+                * Bluetooth connection and disconnection.
+                * Manual input of the port name and port settings.
+                * Selection of the opening and closing sensor of the cash drawer.
+                * Confirmation of device status.
+                * Sample print of German.
+                * Implementation of the application state transition.
+
+        [StarIO.framework]
+        - Version up.
+            * Modification API.
+
+        [StarIO_Extension.framework]
+        - Bug Fix.
+            * Measures to the repeated calls of the connection and disconnection.
+
+        [SMCloudServices.framework]
+        - Version up.
+            * Modification API.
+
+    Ver.5.0.0
+    2016/03/28:
+        First release.

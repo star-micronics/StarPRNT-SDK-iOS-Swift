@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		887A7588253959BD0028CA34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887A7587253959BD0028CA34 /* AppDelegate.swift */; };
+		887A758C253959BD0028CA34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887A758B253959BD0028CA34 /* ViewController.swift */; };
+		887A758F253959BD0028CA34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887A758D253959BD0028CA34 /* Main.storyboard */; };
+		887A7591253959BE0028CA34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 887A7590253959BE0028CA34 /* Assets.xcassets */; };
+		887A7594253959BE0028CA34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887A7592253959BE0028CA34 /* LaunchScreen.storyboard */; };
+		A21E5B5B49DD153823F16BFD /* Pods_StarIODeviceSettingSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49182AB3CA44536DBC3F1C9F /* Pods_StarIODeviceSettingSDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C83E523C1E15BE063E4F566 /* Pods-StarIODeviceSettingSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarIODeviceSettingSDK.release.xcconfig"; path = "Target Support Files/Pods-StarIODeviceSettingSDK/Pods-StarIODeviceSettingSDK.release.xcconfig"; sourceTree = "<group>"; };
+		2E618E0467E3F9E2D34924FF /* Pods-StarIODeviceSettingSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarIODeviceSettingSDK.debug.xcconfig"; path = "Target Support Files/Pods-StarIODeviceSettingSDK/Pods-StarIODeviceSettingSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		49182AB3CA44536DBC3F1C9F /* Pods_StarIODeviceSettingSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarIODeviceSettingSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		887A7584253959BD0028CA34 /* StarIODeviceSettingSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarIODeviceSettingSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		887A7587253959BD0028CA34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		887A758B253959BD0028CA34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		887A758E253959BD0028CA34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		887A7590253959BE0028CA34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		887A7593253959BE0028CA34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		887A7595253959BE0028CA34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		887A75A0253966360028CA34 /* StarIODeviceSettingSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StarIODeviceSettingSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		887A7581253959BD0028CA34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A21E5B5B49DD153823F16BFD /* Pods_StarIODeviceSettingSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		887A757B253959BD0028CA34 = {
+			isa = PBXGroup;
+			children = (
+				887A7586253959BD0028CA34 /* StarIODeviceSettingSDK */,
+				887A7585253959BD0028CA34 /* Products */,
+				887A759B253965B20028CA34 /* Frameworks */,
+				995D86777E92CB62619D345A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		887A7585253959BD0028CA34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				887A7584253959BD0028CA34 /* StarIODeviceSettingSDK.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		887A7586253959BD0028CA34 /* StarIODeviceSettingSDK */ = {
+			isa = PBXGroup;
+			children = (
+				887A75A0253966360028CA34 /* StarIODeviceSettingSDK-Bridging-Header.h */,
+				887A7587253959BD0028CA34 /* AppDelegate.swift */,
+				887A758B253959BD0028CA34 /* ViewController.swift */,
+				887A758D253959BD0028CA34 /* Main.storyboard */,
+				887A7590253959BE0028CA34 /* Assets.xcassets */,
+				887A7592253959BE0028CA34 /* LaunchScreen.storyboard */,
+				887A7595253959BE0028CA34 /* Info.plist */,
+			);
+			path = StarIODeviceSettingSDK;
+			sourceTree = "<group>";
+		};
+		887A759B253965B20028CA34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49182AB3CA44536DBC3F1C9F /* Pods_StarIODeviceSettingSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		995D86777E92CB62619D345A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E618E0467E3F9E2D34924FF /* Pods-StarIODeviceSettingSDK.debug.xcconfig */,
+				0C83E523C1E15BE063E4F566 /* Pods-StarIODeviceSettingSDK.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		887A7583253959BD0028CA34 /* StarIODeviceSettingSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 887A7598253959BE0028CA34 /* Build configuration list for PBXNativeTarget "StarIODeviceSettingSDK" */;
+			buildPhases = (
+				33719396996FCAB8D6792478 /* [CP] Check Pods Manifest.lock */,
+				887A7580253959BD0028CA34 /* Sources */,
+				887A7581253959BD0028CA34 /* Frameworks */,
+				887A7582253959BD0028CA34 /* Resources */,
+				E4DF9097A1818CCF6DCA710D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarIODeviceSettingSDK;
+			productName = StarIODeviceSettingSDK;
+			productReference = 887A7584253959BD0028CA34 /* StarIODeviceSettingSDK.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		887A757C253959BD0028CA34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = u3237;
+				TargetAttributes = {
+					887A7583253959BD0028CA34 = {
+						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1170;
+					};
+				};
+			};
+			buildConfigurationList = 887A757F253959BD0028CA34 /* Build configuration list for PBXProject "StarIODeviceSettingSDK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 887A757B253959BD0028CA34;
+			productRefGroup = 887A7585253959BD0028CA34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				887A7583253959BD0028CA34 /* StarIODeviceSettingSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		887A7582253959BD0028CA34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				887A7594253959BE0028CA34 /* LaunchScreen.storyboard in Resources */,
+				887A7591253959BE0028CA34 /* Assets.xcassets in Resources */,
+				887A758F253959BD0028CA34 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33719396996FCAB8D6792478 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarIODeviceSettingSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4DF9097A1818CCF6DCA710D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarIODeviceSettingSDK/Pods-StarIODeviceSettingSDK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarIODeviceSettingSDK/Pods-StarIODeviceSettingSDK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarIODeviceSettingSDK/Pods-StarIODeviceSettingSDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		887A7580253959BD0028CA34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				887A758C253959BD0028CA34 /* ViewController.swift in Sources */,
+				887A7588253959BD0028CA34 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		887A758D253959BD0028CA34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				887A758E253959BD0028CA34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		887A7592253959BE0028CA34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				887A7593253959BE0028CA34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		887A7596253959BE0028CA34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		887A7597253959BE0028CA34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		887A7599253959BE0028CA34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E618E0467E3F9E2D34924FF /* Pods-StarIODeviceSettingSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MWPD5A288Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = StarIODeviceSettingSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.StarIODeviceSettingSDK";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/StarIODeviceSettingSDK-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		887A759A253959BE0028CA34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C83E523C1E15BE063E4F566 /* Pods-StarIODeviceSettingSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MWPD5A288Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = StarIODeviceSettingSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.StarIODeviceSettingSDK";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/StarIODeviceSettingSDK-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		887A757F253959BD0028CA34 /* Build configuration list for PBXProject "StarIODeviceSettingSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				887A7596253959BE0028CA34 /* Debug */,
+				887A7597253959BE0028CA34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		887A7598253959BE0028CA34 /* Build configuration list for PBXNativeTarget "StarIODeviceSettingSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				887A7599253959BE0028CA34 /* Debug */,
+				887A759A253959BE0028CA34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 887A757C253959BD0028CA34 /* Project object */;
+}

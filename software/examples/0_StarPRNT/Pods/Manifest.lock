@@ -1,0 +1,21 @@
+PODS:
+  - StarIO (2.10.0)
+  - StarIO_Extension (1.17.0):
+    - StarIO
+
+DEPENDENCIES:
+  - StarIO (= 2.10.0)
+  - StarIO_Extension (= 1.17.0)
+
+SPEC REPOS:
+  "git@192.168.32.36:software_package_manager/cocoapods_specs_private.git":
+    - StarIO
+    - StarIO_Extension
+
+SPEC CHECKSUMS:
+  StarIO: 4083e371722e033a5c1aca269049784911b75d37
+  StarIO_Extension: 8336528727204ee24e8d6907fd41d355a701f0f7
+
+PODFILE CHECKSUM: 00bef6b37db6801b58bc2d74b99f02cccb37674b
+
+COCOAPODS: 1.10.1
