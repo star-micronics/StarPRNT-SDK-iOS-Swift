@@ -1,3 +1,10 @@
+# V5.16.1
+
+## StarIO
+- Fixed Bugs
+  * Fixed application crash when using SMFileLogger.
+
+
 # V5.16.0
 
 ## StarIO
