@@ -1,3 +1,11 @@
+# V5.16.2
+
+## StarIO
+- Fixed Bugs
+  * Fixed a probrem that application may crash when using SMFileLogger.
+- Updated Bluetooth module information for SM-L200.
+
+
 # V5.16.1
 
 ## StarIO
