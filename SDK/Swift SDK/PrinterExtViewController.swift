@@ -300,18 +300,13 @@ class PrinterExtViewController: CommonViewController, StarIoExtManagerDelegate {
     }
     
     internal func beginAnimationCommantLabel() {
-        UIView.beginAnimations(nil, context: nil)
-        
         self.commentLabel.alpha = 0.0
         
-        UIView.setAnimationDelay             (0.0)                             // 0mS!!!
-        UIView.setAnimationDuration          (0.6)                             // 600mS!!!
-        UIView.setAnimationRepeatCount       (Float(UINT32_MAX))
-        UIView.setAnimationRepeatAutoreverses(true)
-        UIView.setAnimationCurve             (UIView.AnimationCurve.easeIn)
-        
-        self.commentLabel.alpha = 1.0
-        
-        UIView.commitAnimations()
+        UIView.animate(withDuration: 0.6,
+                       delay: 0,
+                       options: [.repeat, .autoreverse, .curveEaseIn],
+                       animations: {
+            self.commentLabel.alpha = 1.0
+        })
     }
 }

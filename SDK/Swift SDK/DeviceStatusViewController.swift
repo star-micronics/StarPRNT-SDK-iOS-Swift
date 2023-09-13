@@ -150,88 +150,88 @@ class DeviceStatusViewController: CommonViewController, UITableViewDelegate, UIT
             try port.getParsedStatus(starPrinterStatus: &printerStatus, level: 2)
             
             if printerStatus.offline == sm_true {
-                self.statusCellArray.add(["Online", "Offline", UIColor.red])
+                self.statusCellArray.add(["Online", "Offline", UIColor.red] as [Any])
             }
             else {
-                self.statusCellArray.add(["Online",  "Online",  UIColor.blue])
+                self.statusCellArray.add(["Online",  "Online",  UIColor.blue] as [Any])
             }
             
             if printerStatus.coverOpen == sm_true {
-                self.statusCellArray.add(["Cover", "Open",   UIColor.red])
+                self.statusCellArray.add(["Cover", "Open",   UIColor.red] as [Any])
             }
             else {
-                self.statusCellArray.add(["Cover", "Closed", UIColor.blue])
+                self.statusCellArray.add(["Cover", "Closed", UIColor.blue] as [Any])
             }
             
             if printerStatus.receiptPaperEmpty == sm_true {
-                self.statusCellArray.add(["Paper", "Empty", UIColor.red])
+                self.statusCellArray.add(["Paper", "Empty", UIColor.red] as [Any])
             }
             else if printerStatus.receiptPaperNearEmptyInner == sm_true ||
                     printerStatus.receiptPaperNearEmptyOuter == sm_true {
-                self.statusCellArray.add(["Paper", "Near Empty", UIColor.orange])
+                self.statusCellArray.add(["Paper", "Near Empty", UIColor.orange] as [Any])
             }
             else {
-                self.statusCellArray.add(["Paper", "Ready",      UIColor.blue])
+                self.statusCellArray.add(["Paper", "Ready",      UIColor.blue] as [Any])
             }
             
             if AppDelegate.getCashDrawerOpenActiveHigh() == true {
                 if printerStatus.compulsionSwitch == sm_true {
-                    self.statusCellArray.add(["Cash Drawer", "Open",   UIColor.red])
+                    self.statusCellArray.add(["Cash Drawer", "Open",   UIColor.red] as [Any])
                 }
                 else {
-                    self.statusCellArray.add(["Cash Drawer", "Closed", UIColor.blue])
+                    self.statusCellArray.add(["Cash Drawer", "Closed", UIColor.blue] as [Any])
                 }
             }
             else {
                 if printerStatus.compulsionSwitch == sm_true {
-                    self.statusCellArray.add(["Cash Drawer", "Closed", UIColor.blue])
+                    self.statusCellArray.add(["Cash Drawer", "Closed", UIColor.blue] as [Any])
                 }
                 else {
-                    self.statusCellArray.add(["Cash Drawer", "Open",   UIColor.red])
+                    self.statusCellArray.add(["Cash Drawer", "Open",   UIColor.red] as [Any])
                 }
             }
             
             if printerStatus.overTemp == sm_true {
-                self.statusCellArray.add(["Head Temperature", "High",   UIColor.red])
+                self.statusCellArray.add(["Head Temperature", "High",   UIColor.red] as [Any])
             }
             else {
-                self.statusCellArray.add(["Head Temperature", "Normal", UIColor.blue])
+                self.statusCellArray.add(["Head Temperature", "Normal", UIColor.blue] as [Any])
             }
             
             if printerStatus.unrecoverableError == sm_true {
-                self.statusCellArray.add(["Non Recoverable Error", "Occurs", UIColor.red])
+                self.statusCellArray.add(["Non Recoverable Error", "Occurs", UIColor.red] as [Any])
             }
             else {
-                self.statusCellArray.add(["Non Recoverable Error", "Ready",  UIColor.blue])
+                self.statusCellArray.add(["Non Recoverable Error", "Ready",  UIColor.blue] as [Any])
             }
             
             if printerStatus.cutterError == sm_true {
-                self.statusCellArray.add(["Paper Cutter", "Error", UIColor.red])
+                self.statusCellArray.add(["Paper Cutter", "Error", UIColor.red] as [Any])
             }
             else {
-                self.statusCellArray.add(["Paper Cutter", "Ready", UIColor.blue])
+                self.statusCellArray.add(["Paper Cutter", "Ready", UIColor.blue] as [Any])
             }
             
             if printerStatus.headThermistorError == sm_true {
-                self.statusCellArray.add(["Head Thermistor", "Error",  UIColor.red])
+                self.statusCellArray.add(["Head Thermistor", "Error",  UIColor.red] as [Any])
             }
             else {
-                self.statusCellArray.add(["Head Thermistor", "Normal", UIColor.blue])
+                self.statusCellArray.add(["Head Thermistor", "Normal", UIColor.blue] as [Any])
             }
             
             if printerStatus.voltageError == sm_true {
-                self.statusCellArray.add(["Voltage", "Error",  UIColor.red])
+                self.statusCellArray.add(["Voltage", "Error",  UIColor.red] as [Any])
             }
             else {
-                self.statusCellArray.add(["Voltage", "Normal", UIColor.blue])
+                self.statusCellArray.add(["Voltage", "Normal", UIColor.blue] as [Any])
             }
             
             if printerStatus.etbAvailable == sm_true {
-                self.statusCellArray.add(["ETB Counter", String(format: "%d", printerStatus.etbCounter), UIColor.blue])
+                self.statusCellArray.add(["ETB Counter", String(format: "%d", printerStatus.etbCounter), UIColor.blue] as [Any])
             }
             
             if printerStatus.offline == sm_true {
-                self.firmwareInfoCellArray.add(["Unable to get F/W info. from an error.", "", UIColor.red])
+                self.firmwareInfoCellArray.add(["Unable to get F/W info. from an error.", "", UIColor.red] as [Any])
             }
             else {
                 let dictionary = try port.getFirmwareInformation()
@@ -239,8 +239,8 @@ class DeviceStatusViewController: CommonViewController, UITableViewDelegate, UIT
                 let modelName:       String = dictionary["ModelName"]       as! String
                 let firmwareVersion: String = dictionary["FirmwareVersion"] as! String
                 
-                self.firmwareInfoCellArray.add(["Model Name",       modelName,       UIColor.blue])
-                self.firmwareInfoCellArray.add(["Firmware Version", firmwareVersion, UIColor.blue])
+                self.firmwareInfoCellArray.add(["Model Name",       modelName,       UIColor.blue] as [Any])
+                self.firmwareInfoCellArray.add(["Firmware Version", firmwareVersion, UIColor.blue] as [Any])
             }
             
             result = .success

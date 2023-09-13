@@ -181,7 +181,7 @@ class ModelCapability : NSObject {
                                false, false, true, false, false, false, false, false, false,
                                true, false, false, false, true, false),
         .tsp100IV: PrinterInfo("TSP100IV", .starPRNT, true, "", ["TSP143IV (STR-001)"],
-                               true, true, true, true, false, false, true, false, false,
+                               true, true, true, true, false, false, true, true, false,
                                true, true, true, true, true, false),
         .tsp650II: PrinterInfo("TSP650II", .starLine, true, "", ["TSP654II (STR_T-001)",
                                                                  // Only LAN model->

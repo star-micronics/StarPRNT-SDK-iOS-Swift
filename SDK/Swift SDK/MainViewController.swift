@@ -97,21 +97,16 @@ class MainViewController: CommonViewController, UITableViewDelegate, UITableView
                     cell      .textLabel!.textColor = UIColor.red
                     cell.detailTextLabel!.textColor = UIColor.red
                     
-                    UIView.beginAnimations(nil, context: nil)
-                    
                     cell      .textLabel!.alpha = 0.0
                     cell.detailTextLabel!.alpha = 0.0
                     
-                    UIView.setAnimationDelay             (0.0)                             // 0mS!!!
-                    UIView.setAnimationDuration          (0.6)                             // 600mS!!!
-                    UIView.setAnimationRepeatCount       (Float(UINT32_MAX))
-                    UIView.setAnimationRepeatAutoreverses(true)
-                    UIView.setAnimationCurve             (UIView.AnimationCurve.easeIn)
-                    
-                    cell      .textLabel!.alpha = 1.0
-                    cell.detailTextLabel!.alpha = 1.0
-                    
-                    UIView.commitAnimations()
+                    UIView.animate(withDuration: 0.6,
+                                   delay: 0,
+                                   options: [.repeat, .autoreverse, .curveEaseIn],
+                                   animations: {
+                        cell      .textLabel!.alpha = 1.0
+                        cell.detailTextLabel!.alpha = 1.0
+                    })
                     
                     cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
                     

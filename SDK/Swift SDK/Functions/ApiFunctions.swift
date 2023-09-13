@@ -402,8 +402,8 @@ class ApiFunctions {
             
             builder.appendCutPaper(.partialCutWithFeed)
             
-            builder.appendTopMargin(6)
-            builder.append("*Top margin:6mm*\n".data(using: .ascii))
+            builder.appendTopMargin(5)
+            builder.append("*Top margin:5mm*\n".data(using: .ascii))
             builder.append(data)
             builder.append(data)
             builder.append(data)
