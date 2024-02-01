@@ -2,7 +2,7 @@
 //  StarIoExtManagerInternal.h
 //  StarIO_Extension
 //
-//  Created by Yuji on 2015/**/**.
+//  Created by Star Micronics on 2015/**/**.
 //  Copyright (c) 2015年 Star Micronics. All rights reserved.
 //
 

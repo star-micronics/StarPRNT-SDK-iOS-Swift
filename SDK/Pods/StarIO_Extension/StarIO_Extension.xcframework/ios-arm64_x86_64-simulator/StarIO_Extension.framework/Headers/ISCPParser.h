@@ -2,7 +2,7 @@
 //  ISCPParser.h
 //  StarIO_Extension
 //
-//  Created by Yuji on 2017/**/**.
+//  Created by Star Micronics on 2017/**/**.
 //  Copyright © 2017年 Star Micronics. All rights reserved.
 //
 

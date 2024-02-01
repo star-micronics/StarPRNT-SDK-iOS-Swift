@@ -53,6 +53,7 @@
 		88A8FBCB212E97E600C48F88 /* SoundFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A8FBCA212E97E600C48F88 /* SoundFileViewController.swift */; };
 		88C758C420C0EFBD003C6FF8 /* PrintReDirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C758C320C0EFBD003C6FF8 /* PrintReDirectionViewController.swift */; };
 		AEF661271F27ACB9436F6C80 /* Pods_Swift_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE0ED4B4A533F48038F34C8 /* Pods_Swift_SDK.framework */; };
+		9F7656EC2B3560FE00DBBEB6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9F7656EB2B3560FE00DBBEB6 /* PrivacyInfo.xcprivacy */; };
 		BAE0A9F21E09411B004B490F /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE0A9F11E09411B004B490F /* DisplayViewController.swift */; };
 		BAE0A9F41E09412E004B490F /* DisplayExtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE0A9F31E09412E004B490F /* DisplayExtViewController.swift */; };
 		BAE0A9FE1E094275004B490F /* DisplayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE0A9FD1E094275004B490F /* DisplayFunctions.swift */; };
@@ -116,6 +117,7 @@
 		88A8FBCA212E97E600C48F88 /* SoundFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundFileViewController.swift; sourceTree = "<group>"; };
 		88C758C320C0EFBD003C6FF8 /* PrintReDirectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintReDirectionViewController.swift; sourceTree = "<group>"; };
 		9DE0ED4B4A533F48038F34C8 /* Pods_Swift_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F7656EB2B3560FE00DBBEB6 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = "Swift SDK/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
 		BAE0A9F11E09411B004B490F /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		BAE0A9F31E09412E004B490F /* DisplayExtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayExtViewController.swift; sourceTree = "<group>"; };
 		BAE0A9FD1E094275004B490F /* DisplayFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayFunctions.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		6267F74B1BDF54D300D02B89 = {
 			isa = PBXGroup;
 			children = (
+				9F7656EB2B3560FE00DBBEB6 /* PrivacyInfo.xcprivacy */,
 				6267F7561BDF54D300D02B89 /* Swift SDK */,
 				6267F7551BDF54D300D02B89 /* Products */,
 				8CA08D1453B699C0DDC42DD3 /* Pods */,
@@ -335,6 +338,7 @@
 			files = (
 				6267F7621BDF54D300D02B89 /* LaunchScreen.storyboard in Resources */,
 				6267F75F1BDF54D300D02B89 /* Assets.xcassets in Resources */,
+				9F7656EC2B3560FE00DBBEB6 /* PrivacyInfo.xcprivacy in Resources */,
 				6267F75D1BDF54D300D02B89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,7 +601,7 @@
 				INFOPLIST_FILE = "Swift SDK/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.17.0;
+				MARKETING_VERSION = 5.17.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.stariosdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -626,7 +630,7 @@
 				INFOPLIST_FILE = "Swift SDK/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.17.0;
+				MARKETING_VERSION = 5.17.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.stariosdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

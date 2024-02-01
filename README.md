@@ -2,6 +2,10 @@
 
 This package contains StarPRNT SDK for supporting to develop applications for Star printers.
 
+In accordance with Apple's guidelines, StarIO V2.11.1 or later, StarIO_Extension V1.17.1 or later, StarIODeviceSetting V1.0.2 or later include a privacy manifest file.
+Please see [here](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files) for the Manifest file.
+StarIO, StarIO_Extension, uses User defaults APIs. StarIODeviceSetting does not use the Required Reason API. (As of January 29, 2024)
+
 
 ## Scope
 
@@ -68,4 +72,4 @@ Please refer to the [StarPRNT SDK document](https://www.star-m.jp/starprntsdk-om
 
 ## Copyright
 
-Copyright 2016-2023 Star Micronics Co., Ltd. All rights reserved.
+Copyright 2016-2024 Star Micronics Co., Ltd. All rights reserved.

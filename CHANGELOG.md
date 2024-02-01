@@ -1,3 +1,22 @@
+# V5.17.1
+
+## StarIO
+- Support Privacy Manifest
+   * Added privacy manifest file according to Apple's guidelines. (It uses User Defaults APIs.)
+
+## StarIO_Extension
+- Support Privacy Manifest
+   * Added privacy manifest file according to Apple's guidelines. (It uses User Defaults APIs.)
+
+## StarIODeviceSetting
+- Support Privacy Manifest
+   * Added privacy manifest file according to Apple's guidelines. (It does not use Required Reason API.)
+   * Changed to Embedded Framework from Static Library.
+
+## SDK
+- Support Privacy Manifest
+   * Added privacy manifest file according to Apple's guidelines. (It uses User Defaults APIs.)
+
 # V5.17.0
 
 ## StarIO

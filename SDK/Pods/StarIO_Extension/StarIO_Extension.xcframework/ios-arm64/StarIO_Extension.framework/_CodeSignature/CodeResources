@@ -6,19 +6,19 @@
 	<dict>
 		<key>Headers/ISCBBuilder.h</key>
 		<data>
-		6xJLCy9yN70Inn44OUYEYTp1nPE=
+		cvOr6iXFDDOdFCZTzXiEUDa52q4=
 		</data>
 		<key>Headers/ISCPConnectParser.h</key>
 		<data>
-		vpQ3WpoTWoCkVykRJuZNStilXp0=
+		pPe/rdj1LNq3AU20hv22EdwMHaI=
 		</data>
 		<key>Headers/ISCPParser.h</key>
 		<data>
-		/JfGOic9PMOlaC3QxeecEeZ3cZI=
+		Y5CpPwJLH9qscEs0dXVbodCIO0E=
 		</data>
 		<key>Headers/ISDCBBuilder.h</key>
 		<data>
-		oa/Y+42AvinymHw3WrMWphoIyVQ=
+		w3uBnl2J0fC5sARW+Q14fyFdys0=
 		</data>
 		<key>Headers/ISMCBBuilder.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/SMBluetoothManagerFactory.h</key>
 		<data>
-		L9C+f9d1plzKvNrzx9QA+i/xhqA=
+		jStaI6Ge6l9Y0I8OdhNd4X5TnPU=
 		</data>
 		<key>Headers/SMSoundSetting.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/StarIoExt.h</key>
 		<data>
-		ByySbcYctnnRIgNEzbqIbTQBPTM=
+		5fD7Eyh5IPSIhNbwY0Fu1SdrEBE=
 		</data>
 		<key>Headers/StarIoExtManager+Asynchronous.h</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Headers/StarIoExtManagerInternal.h</key>
 		<data>
-		wdyAOfcEQorGvyTU58HTTlWq2nY=
+		Plln89NQFGnZ1DEtlgSHsDx8kyY=
 		</data>
 		<key>Headers/StarIoExtResultCode.h</key>
 		<data>
@@ -70,11 +70,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SmEdlViqDctUkjOj3vY7lf0ZZUc=
+		wpRB72rKdZl6dSwNuNqOFrCDPVw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		CLibEq/m2jwoa1wWsXfmny/xk0Y=
+		I+Jt2wxfhD4q8NWhhy9jvwdkwIs=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		J9WdlSJWEg3xNG+aQ4rd8B3a5wI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -83,44 +87,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6xJLCy9yN70Inn44OUYEYTp1nPE=
+			cvOr6iXFDDOdFCZTzXiEUDa52q4=
 			</data>
 			<key>hash2</key>
 			<data>
-			XKoZD1EhunauUJeJNVy6tHthO/E8Zd6BJzRRPg1Hn8U=
+			lohfNNxeEiDP2tEL0kpsYrzziVXkfxcY9WB/v5UU22c=
 			</data>
 		</dict>
 		<key>Headers/ISCPConnectParser.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vpQ3WpoTWoCkVykRJuZNStilXp0=
+			pPe/rdj1LNq3AU20hv22EdwMHaI=
 			</data>
 			<key>hash2</key>
 			<data>
-			4t51DBd5bjBXvpWqgd0SGJQMfi0oEZQkXr5G+C3+F3U=
+			1H/xTPpFALCCrmTaU46H9ZO7J0TwMbHSwGIaPAFdjHE=
 			</data>
 		</dict>
 		<key>Headers/ISCPParser.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/JfGOic9PMOlaC3QxeecEeZ3cZI=
+			Y5CpPwJLH9qscEs0dXVbodCIO0E=
 			</data>
 			<key>hash2</key>
 			<data>
-			qN0mYvMw4EOLnzI6Alh98rzWyjOZ7L/s1kj2/2gUpCg=
+			Ti9Ml7GdciLGMDDZERs894NsqgqXvlNracx00cmEXE8=
 			</data>
 		</dict>
 		<key>Headers/ISDCBBuilder.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oa/Y+42AvinymHw3WrMWphoIyVQ=
+			w3uBnl2J0fC5sARW+Q14fyFdys0=
 			</data>
 			<key>hash2</key>
 			<data>
-			fz0hx2iREiAuhhIIkM1Ll5O10zqD2ir/46BktLUoYOE=
+			sB/n0unKDY9w1jDcJ14N4OM5W4ddGPZtgsGUqXiiVEo=
 			</data>
 		</dict>
 		<key>Headers/ISMCBBuilder.h</key>
@@ -138,11 +142,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L9C+f9d1plzKvNrzx9QA+i/xhqA=
+			jStaI6Ge6l9Y0I8OdhNd4X5TnPU=
 			</data>
 			<key>hash2</key>
 			<data>
-			RuMelnoANdzCKJr8+F3KRlbx8fd0ihiv48l/WV+t4LE=
+			AL688OGXLVtguQL8vf8uA5vVFSk0MpSjsjiXZCafpEo=
 			</data>
 		</dict>
 		<key>Headers/SMSoundSetting.h</key>
@@ -171,11 +175,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ByySbcYctnnRIgNEzbqIbTQBPTM=
+			5fD7Eyh5IPSIhNbwY0Fu1SdrEBE=
 			</data>
 			<key>hash2</key>
 			<data>
-			uOqmQt3P1GlxgRBXZNJbutEy/itqr9ZLxFi1gmTWGdA=
+			8zIUY/xtnXV4/smuuFowDzmCWJqhSWjEEmDkEcnElzE=
 			</data>
 		</dict>
 		<key>Headers/StarIoExtManager+Asynchronous.h</key>
@@ -237,11 +241,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wdyAOfcEQorGvyTU58HTTlWq2nY=
+			Plln89NQFGnZ1DEtlgSHsDx8kyY=
 			</data>
 			<key>hash2</key>
 			<data>
-			cp+/FmfaKXQ47HkJz6HUOv+BCcVPM6O9/QkDX62vZE8=
+			SQrbN24k4FmkGoQ2CTSRfGfWOkaQmRz6xblb5gGGQhY=
 			</data>
 		</dict>
 		<key>Headers/StarIoExtResultCode.h</key>
@@ -259,11 +263,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CLibEq/m2jwoa1wWsXfmny/xk0Y=
+			I+Jt2wxfhD4q8NWhhy9jvwdkwIs=
 			</data>
 			<key>hash2</key>
 			<data>
-			DvCdyYzO+5wiE7ya4o6GvZXyzQhIaaCoB2u5OG5z/ys=
+			UzecftsC2ausgGiFabOALTv8OQFnu7fgtKRGqSUSVBs=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			J9WdlSJWEg3xNG+aQ4rd8B3a5wI=
+			</data>
+			<key>hash2</key>
+			<data>
+			NTD2QgaQhDoe4Y37AJX0sKE3JlvWK0iV2iGkokaA4X0=
 			</data>
 		</dict>
 	</dict>
