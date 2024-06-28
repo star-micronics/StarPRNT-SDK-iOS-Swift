@@ -1,3 +1,21 @@
+# V5.18.0
+
+## StarIO
+- Minor Fixes that do not affect operation.
+
+## StarIO_Extension
+- Added features
+   * ISCBBuilder Class : SCBCutPaperAction.tearOff
+   * ISCBBuilder Class : SCBInternationalType.india
+
+## SDK
+- Added Sample Codes
+   * Supported BSC10II.
+
+StarIO (Ver. 2.11.2)<br>
+StarIO_Extension (Ver. 1.18.0)
+
+
 # V5.17.1
 
 ## StarIO
@@ -27,6 +45,7 @@ StarIO_Extension (Ver. 1.17.1)
 
 StarIO (Ver. 2.11.0)<br>
 StarIO_Extension (Ver. 1.17.0)
+
 
 # V5.16.2
 

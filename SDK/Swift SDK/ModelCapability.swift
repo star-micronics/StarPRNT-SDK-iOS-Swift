@@ -26,6 +26,7 @@ enum ModelIndex: Int {     // Don't insert(Only addition)
     case sm_T300I
     case sm_T400I
     case bsc10
+    case bsc10ii
     case sm_S210I_StarPRNT
     case sm_S220I_StarPRNT
     case sm_S230I_StarPRNT
@@ -142,23 +143,21 @@ class ModelCapability : NSObject {
         ModelIndex.tsp650II,
         ModelIndex.tsp700II,
         ModelIndex.tsp800II,
-        ModelIndex.sp700,                 // <-
+        ModelIndex.sp700,
         ModelIndex.sm_S210I,
         ModelIndex.sm_S220I,
         ModelIndex.sm_S230I,
         ModelIndex.sm_T300I,
         ModelIndex.sm_T400I,
-        ModelIndex.sm_L200,               // <-
-        ModelIndex.sm_L300,               // <-
+        ModelIndex.sm_L200,
+        ModelIndex.sm_L300,
         ModelIndex.bsc10,
+        ModelIndex.bsc10ii,
         ModelIndex.sm_S210I_StarPRNT,
         ModelIndex.sm_S220I_StarPRNT,
         ModelIndex.sm_S230I_StarPRNT,
         ModelIndex.sm_T300I_StarPRNT,
         ModelIndex.sm_T400I_StarPRNT
-//      ModelIndex.sm_L200,
-//      ModelIndex.sp700,
-//      ModelIndex.sm_L300
     ]
     
     static var modelCapabilityDictionary: [ModelIndex: PrinterInfo] = [
@@ -215,6 +214,9 @@ class ModelCapability : NSObject {
         .bsc10:    PrinterInfo("BSC10", .escPos, true, "escpos", ["BSC10"],
                                true, false, true, false, false, false, true, false, false,
                                true, false, false, false, false, false),
+        .bsc10ii:  PrinterInfo("BSC10II", .starPRNT, true, "", ["BSC10II (STR-001)"],
+                               true, true, true, true, false, false, true, false, false,
+                               true, false, false, false, true, false),
         .sm_S210I_StarPRNT: PrinterInfo("SM-S210i StarPRNT", .starPRNT, false, "Portable", ["SM-S210i StarPRNT"],
                                         true, false, true, false, false, false, true, false, false,
                                         false, false, false, false, false, false),

@@ -37,8 +37,10 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         
         builder.appendAlignment(SCBAlignmentPosition.center)
         
+        builder.append(("[Sample receipt]\n").data(using: encoding))
+        
         builder.append((
-            "Star Clothing Boutique\n" +
+            "**** Boutique\n" +
             "123 Star Road\n" +
             "City, State 12345\n" +
             "\n").data(using: encoding))
@@ -114,8 +116,10 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         
         builder.appendAlignment(SCBAlignmentPosition.center)
         
+        builder.append(("[Sample receipt]\n").data(using: encoding))
+
         builder.append((
-            "Star Clothing Boutique\n" +
+            "**** Boutique\n" +
             "123 Star Road\n" +
             "City, State 12345\n" +
             "\n").data(using: encoding))
@@ -191,8 +195,10 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         
         builder.appendAlignment(SCBAlignmentPosition.center)
         
+        builder.append(("[Sample receipt]\n").data(using: encoding))
+
         builder.append((
-            "Star Clothing Boutique\n" +
+            "**** Boutique\n" +
             "123 Star Road\n" +
             "City, State 12345\n" +
             "\n").data(using: encoding))
@@ -250,7 +256,8 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
     
     override func create2inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
-        "   Star Clothing Boutique\n" +
+        "       [Sample receipt]\n" +
+        "        **** Boutique\n" +
         "        123 Star Road\n" +
         "      City, State 12345\n" +
         "\n" +
@@ -286,7 +293,8 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
     
     override func create3inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
-        "        Star Clothing Boutique\n" +
+        "            [Sample receipt]\n" +
+        "             **** Boutique\n" +
         "             123 Star Road\n" +
         "           City, State 12345\n" +
         "\n" +
@@ -320,7 +328,8 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
     
     override func create4inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
-        "                   Star Clothing Boutique\n" +
+        "                       [Sample receipt]\n" +
+        "                        **** Boutique\n" +
         "                        123 Star Road\n" +
         "                      City, State 12345\n" +
         "\n" +
@@ -358,7 +367,8 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
     
     override func createEscPos3inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
-        "      Star Clothing Boutique\n" +
+        "          [Sample receipt]\n" +
+        "           **** Boutique\n" +
         "           123 Star Road\n" +
         "         City, State 12345\n" +
         "\n" +
@@ -410,8 +420,10 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         
         builder.appendAlignment(SCBAlignmentPosition.center)
         
+        builder.append(("[Sample receipt]\n").data(using: encoding))
+
         builder.append((
-            "Star Clothing Boutique\n" +
+            "**** Boutique\n" +
             "123 Star Road\n" +
             "City, State 12345\n" +
             "\n").data(using: encoding))
@@ -485,8 +497,10 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         
         builder.appendAlignment(SCBAlignmentPosition.center)
         
+        builder.append(("[Sample receipt]\n").data(using: encoding))
+
         builder.append((
-            "Star Clothing Boutique\n" +
+            "**** Boutique\n" +
             "123 Star Road\n" +
             "City, State 12345\n" +
             "\n").data(using: encoding))

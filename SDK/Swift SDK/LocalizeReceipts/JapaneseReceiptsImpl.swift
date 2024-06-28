@@ -39,7 +39,9 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
         
         builder.appendEmphasis(true)
         
-        builder.appendData(withMultipleHeight: "スター電機\n".data(using: encoding), height: 3)
+        builder.append(("[サンプル印刷]\n").data(using: encoding))
+        
+        builder.appendData(withMultipleHeight: "○○○○電機\n".data(using: encoding), height: 3)
         
         builder.appendData(withMultipleHeight: "修理報告書　兼領収書\n".data(using: encoding), height: 2)
         
@@ -50,12 +52,11 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
         builder.append((
             "--------------------------------\n" +
             "発行日時：YYYY年MM月DD日HH時MM分\n" +
-            "TEL：054-347-XXXX\n" +
+            "TEL：054-263-XXXX\n" +
             "\n" +
             "         ｲｹﾆｼ  ｼｽﾞｺ   ｻﾏ\n" +
             "お名前：池西　静子　様\n" +
-            "御住所：静岡市清水区七ツ新屋\n" +
-            "　　　　５３６番地\n" +
+            "御住所：静岡市駿河区中吉田\n" +
             "伝票番号：No.12345-67890\n" +
             "\n" +
             "　この度は修理をご用命頂き有難うございます。\n" +
@@ -105,7 +106,9 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
         
         builder.appendEmphasis(true)
         
-        builder.appendData(withMultipleHeight: "スター電機\n".data(using: encoding), height: 3)
+        builder.append(("[サンプル印刷]\n").data(using: encoding))
+        
+        builder.appendData(withMultipleHeight: "○○○○電機\n".data(using: encoding), height: 3)
         
         builder.appendData(withMultipleHeight: "修理報告書　兼領収書\n".data(using: encoding), height: 2)
         
@@ -116,12 +119,11 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
         builder.append((
             "------------------------------------------------\n" +
             "発行日時：YYYY年MM月DD日HH時MM分\n" +
-            "TEL：054-347-XXXX\n" +
+            "TEL：054-263-XXXX\n" +
             "\n" +
             "           ｲｹﾆｼ  ｼｽﾞｺ   ｻﾏ\n" +
             "　お名前：池西　静子　様\n" +
-            "　御住所：静岡市清水区七ツ新屋\n" +
-            "　　　　　５３６番地\n" +
+            "　御住所：静岡市駿河区中吉田\n" +
             "　伝票番号：No.12345-67890\n" +
             "\n" +
             "　この度は修理をご用命頂き有難うございます。\n" +
@@ -171,7 +173,9 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
         
         builder.appendEmphasis(true)
         
-        builder.appendData(withMultipleHeight: "スター電機\n".data(using: encoding), height: 3)
+        builder.append(("[サンプル印刷]\n").data(using: encoding))
+        
+        builder.appendData(withMultipleHeight: "○○○○電機\n".data(using: encoding), height: 3)
         
         builder.appendData(withMultipleHeight: "修理報告書　兼領収書\n".data(using: encoding), height: 2)
         
@@ -182,12 +186,11 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
         builder.append((
             "---------------------------------------------------------------------\n" +
             "発行日時：YYYY年MM月DD日HH時MM分\n" +
-            "TEL：054-347-XXXX\n" +
+            "TEL：054-263-XXXX\n" +
             "\n" +
             "           ｲｹﾆｼ  ｼｽﾞｺ   ｻﾏ\n" +
             "　お名前：池西　静子　様\n" +
-            "　御住所：静岡市清水区七ツ新屋\n" +
-            "　　　　　５３６番地\n" +
+            "　御住所：静岡市駿河区中吉田\n" +
             "　伝票番号：No.12345-67890\n" +
             "\n" +
             "この度は修理をご用命頂き有難うございます。\n" +
@@ -218,16 +221,16 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
     
     override func create2inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
-        "　　　　　　スター電機\n" +
+        "　　　　　[サンプル印刷]\n" +
+        "　　　　　　○○○○電機\n" +
         "　　　　修理報告書　兼領収書\n" +
         "----------------------------\n" +
         "発行日時：YYYY年MM月DD日HH時MM分\n" +
-        "TEL：054-347-XXXX\n" +
+        "TEL：054-263-XXXX\n" +
         "\n" +
         "　　　　　ｲｹﾆｼ  ｼｽﾞｺ  ｻﾏ\n" +
         "　お名前：池西　静子　様\n" +
-        "　御住所：静岡市清水区七ツ新屋\n" +
-        "　　　　　５３６番地\n" +
+        "　御住所：静岡市駿河区中吉田\n" +
         "　伝票番号：No.12345-67890\n" +
         "\n" +
         "　この度は修理をご用命頂き有難うございます。\n" +
@@ -256,16 +259,16 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
     
     override func create3inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
-        "　　　　　　　　　　スター電機\n" +
+        "　　　　　　　　　[サンプル印刷]\n" +
+        "　　　　　　　　　　○○○○電機\n" +
         "　　　　　　　　修理報告書　兼領収書\n" +
         "---------------------------------------\n" +
         "発行日時：YYYY年MM月DD日HH時MM分\n" +
-        "TEL：054-347-XXXX\n" +
+        "TEL：054-263-XXXX\n" +
         "\n" +
         "　　　　　ｲｹﾆｼ  ｼｽﾞｺ  ｻﾏ\n" +
         "　お名前：池西　静子　様\n" +
-        "　御住所：静岡市清水区七ツ新屋\n" +
-        "　　　　　５３６番地\n" +
+        "　御住所：静岡市駿河区中吉田\n" +
         "　伝票番号：No.12345-67890\n" +
         "\n" +
         "　この度は修理をご用命頂き有難うございます。\n" +
@@ -293,16 +296,16 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
     
     override func create4inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
-        "　　　　　　　　　　　　　　　スター電機\n" +
+        "　　　　　　　　　　　　　　[サンプル印刷]\n" +
+        "　　　　　　　　　　　　　　　○○○○電機\n" +
         "　　　　　　　　　　　　　修理報告書　兼領収書\n" +
         "---------------------------------------------------------\n" +
         "発行日時：YYYY年MM月DD日HH時MM分\n" +
-        "TEL：054-347-XXXX\n" +
+        "TEL：054-263-XXXX\n" +
         "\n" +
         "　　　　　ｲｹﾆｼ  ｼｽﾞｺ  ｻﾏ\n" +
         "　お名前：池西　静子　様\n" +
-        "　御住所：静岡市清水区七ツ新屋\n" +
-        "　　　　　５３６番地\n" +
+        "　御住所：静岡市駿河区中吉田\n" +
         "　伝票番号：No.12345-67890\n" +
         "\n" +
         "　この度は修理をご用命頂き有難うございます。\n" +
@@ -334,16 +337,16 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
     
     override func createEscPos3inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
-        "　　　　　　　 スター電機\n" +
+        "　　　　　　[サンプル印刷]\n" +
+        "　　　　　　　 ○○○○電機\n" +
         "　　　　　 修理報告書　兼領収書\n" +
         "-----------------------------------\n" +
         "発行日時：YYYY年MM月DD日HH時MM分\n" +
-        "TEL：054-347-XXXX\n" +
+        "TEL：054-263-XXXX\n" +
         "\n" +
         "　　　　　ｲｹﾆｼ  ｼｽﾞｺ  ｻﾏ\n" +
         "　お名前：池西　静子　様\n" +
-        "　御住所：静岡市清水区七ツ新屋\n" +
-        "　　　　　５３６番地\n" +
+        "　御住所：静岡市駿河区中吉田\n" +
         "　伝票番号：No.12345-67890\n" +
         "\n" +
         "　この度は修理をご用命頂き有難うございます。\n" +
@@ -391,7 +394,9 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
         
         builder.appendEmphasis(true)
         
-        builder.appendData(withMultipleHeight: "スター電機\n".data(using: encoding), height: 3)
+        builder.append(("[サンプル印刷]\n").data(using: encoding))
+        
+        builder.appendData(withMultipleHeight: "○○○○電機\n".data(using: encoding), height: 3)
         
         builder.appendData(withMultipleHeight: "修理報告書　兼領収書\n".data(using: encoding), height: 2)
         
@@ -402,12 +407,11 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
         builder.append((
             "------------------------------------------\n" +
             "発行日時：YYYY年MM月DD日HH時MM分\n" +
-            "TEL：054-347-XXXX\n" +
+            "TEL：054-263-XXXX\n" +
             "\n" +
             "           ｲｹﾆｼ  ｼｽﾞｺ   ｻﾏ\n" +
             "　お名前：池西　静子　様\n" +
-            "　御住所：静岡市清水区七ツ新屋\n" +
-            "　　　　　５３６番地\n" +
+            "　御住所：静岡市駿河区中吉田\n" +
             "　伝票番号：No.12345-67890\n" +
             "\n" +
             "　この度は修理をご用命頂き有難うございます。\n" +
@@ -455,8 +459,10 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
         
         builder.appendEmphasis(true)
         
+        builder.append(("[サンプル印刷]\n").data(using: encoding))
+        
         builder.appendData(withMultipleHeight: (
-            "スター電機\n" +
+            "○○○○電機\n" +
             "修理報告書　兼領収書\n").data(using: encoding), height: 2)
         
         builder.appendEmphasis(false)
@@ -466,12 +472,11 @@ class JapaneseReceiptsImpl: ILocalizeReceipts {
         builder.append((
             "------------------------------------------\n" +
             "発行日時：YYYY年MM月DD日HH時MM分\n" +
-            "TEL：054-347-XXXX\n" +
+            "TEL：054-263-XXXX\n" +
             "\n" +
             "        ｲｹﾆｼ  ｼｽﾞｺ  ｻﾏ\n" +
             "　お名前：池西  静子　様\n" +
-            "　御住所：静岡市清水区七ツ新屋\n" +
-            "　　　　　５３６番地\n" +
+            "　御住所：静岡市駿河区中吉田\n" +
             "　伝票番号：No.12345-67890\n" +
             "\n" +
             "　この度は修理をご用命頂き有難うございます。\n" +

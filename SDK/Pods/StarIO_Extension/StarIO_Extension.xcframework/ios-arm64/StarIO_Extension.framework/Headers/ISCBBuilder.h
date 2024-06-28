@@ -97,6 +97,7 @@ typedef NS_ENUM(NSUInteger, SCBInternationalType) {
     SCBInternationalTypeLatinAmerica,
     SCBInternationalTypeKorea,
     SCBInternationalTypeIreland,
+    SCBInternationalTypeIndia,
     SCBInternationalTypeLegal
 };
 
@@ -123,7 +124,8 @@ typedef NS_ENUM(NSInteger, SCBCutPaperAction) {
     SCBCutPaperActionFullCut,
     SCBCutPaperActionPartialCut,
     SCBCutPaperActionFullCutWithFeed,
-    SCBCutPaperActionPartialCutWithFeed
+    SCBCutPaperActionPartialCutWithFeed,
+    SCBCutPaperActionTearOff
 };
 
 #pragma mark - Peripheral
