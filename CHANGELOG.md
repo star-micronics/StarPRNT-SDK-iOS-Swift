@@ -10,7 +10,7 @@
 
 ## SDK
 - Added Sample Codes
-   * Supported BSC10II.
+   * Supported BSC10II (Limited region model).
 
 StarIO (Ver. 2.11.2)<br>
 StarIO_Extension (Ver. 1.18.0)
