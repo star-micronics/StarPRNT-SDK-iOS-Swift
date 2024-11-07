@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6103CAB02C61A8CA00F9D26F /* CommonLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6103CAAF2C61A8C300F9D26F /* CommonLabelViewController.swift */; };
 		62583BF21D338CA1005EFC6C /* GermanReceiptsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62583BF11D338CA1005EFC6C /* GermanReceiptsImpl.swift */; };
 		6262A6291E6A6A7200208BAB /* PageModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6262A6281E6A6A7200208BAB /* PageModeViewController.swift */; };
 		6267F7581BDF54D300D02B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267F7571BDF54D300D02B89 /* AppDelegate.swift */; };
@@ -52,8 +53,8 @@
 		88A8FBC7212E705D00C48F88 /* MelodySpeakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A8FBC6212E705D00C48F88 /* MelodySpeakerViewController.swift */; };
 		88A8FBCB212E97E600C48F88 /* SoundFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A8FBCA212E97E600C48F88 /* SoundFileViewController.swift */; };
 		88C758C420C0EFBD003C6FF8 /* PrintReDirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C758C320C0EFBD003C6FF8 /* PrintReDirectionViewController.swift */; };
-		AEF661271F27ACB9436F6C80 /* Pods_Swift_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE0ED4B4A533F48038F34C8 /* Pods_Swift_SDK.framework */; };
 		9F7656EC2B3560FE00DBBEB6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9F7656EB2B3560FE00DBBEB6 /* PrivacyInfo.xcprivacy */; };
+		AEF661271F27ACB9436F6C80 /* Pods_Swift_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE0ED4B4A533F48038F34C8 /* Pods_Swift_SDK.framework */; };
 		BAE0A9F21E09411B004B490F /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE0A9F11E09411B004B490F /* DisplayViewController.swift */; };
 		BAE0A9F41E09412E004B490F /* DisplayExtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE0A9F31E09412E004B490F /* DisplayExtViewController.swift */; };
 		BAE0A9FE1E094275004B490F /* DisplayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE0A9FD1E094275004B490F /* DisplayFunctions.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6103CAAF2C61A8C300F9D26F /* CommonLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLabelViewController.swift; sourceTree = "<group>"; };
 		62583BF11D338CA1005EFC6C /* GermanReceiptsImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GermanReceiptsImpl.swift; sourceTree = "<group>"; };
 		6262A6281E6A6A7200208BAB /* PageModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageModeViewController.swift; sourceTree = "<group>"; };
 		6267F7541BDF54D300D02B89 /* Swift SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +183,7 @@
 				6267F7D41BDF588F00D02B89 /* CombinationExtViewController.swift */,
 				6267F7D51BDF588F00D02B89 /* CombinationViewController.swift */,
 				6267F7D61BDF588F00D02B89 /* CommonViewController.swift */,
+				6103CAAF2C61A8C300F9D26F /* CommonLabelViewController.swift */,
 				62D83D1C1E09147700B1AC03 /* Communications */,
 				62F34AE21D35EFE60074F37E /* DeviceStatusViewController.swift */,
 				BAE0A9F31E09412E004B490F /* DisplayExtViewController.swift */,
@@ -417,6 +420,7 @@
 				DD20E0B71EAD94EC00859F8B /* BluetoothSettingViewController.swift in Sources */,
 				6267F7E81BDF588F00D02B89 /* PrinterViewController.swift in Sources */,
 				6267F7DE1BDF588F00D02B89 /* BarcodeReaderExtViewController.swift in Sources */,
+				6103CAB02C61A8CA00F9D26F /* CommonLabelViewController.swift in Sources */,
 				6267F7E11BDF588F00D02B89 /* CombinationExtViewController.swift in Sources */,
 				88A70BFF20C4BC7E00BAC786 /* SettingManager.swift in Sources */,
 				BAE0A9FE1E094275004B490F /* DisplayFunctions.swift in Sources */,
@@ -601,7 +605,7 @@
 				INFOPLIST_FILE = "Swift SDK/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.18.0;
+				MARKETING_VERSION = 5.19.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.stariosdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -630,7 +634,7 @@
 				INFOPLIST_FILE = "Swift SDK/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.18.0;
+				MARKETING_VERSION = 5.19.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.stariosdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

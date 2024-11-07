@@ -9,6 +9,7 @@
 import UIKit
 
 protocol SwitchTableViewCellDelegate {
+    @MainActor
     func tableView(_ tableView: UITableView, valueChangedStateSwitch on: Bool, indexPath: IndexPath)
 }
 

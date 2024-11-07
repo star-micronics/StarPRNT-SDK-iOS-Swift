@@ -96,8 +96,8 @@ class BlackMarkViewController: CommonViewController, UITableViewDelegate, UITabl
         
         commands = PrinterFunctions.createTextBlackMarkData(emulation, localizeReceipts: localizeReceipts, type: type, utf8: false)
         
-        self.blind = true
-        
+        self.setBlind(true)
+
         let portName:     String = AppDelegate.getPortName()
         let portSettings: String = AppDelegate.getPortSettings()
         let timeout:      UInt32 = 10000                             // 10000mS!!!
@@ -114,7 +114,7 @@ class BlackMarkViewController: CommonViewController, UITableViewDelegate, UITabl
                                                                      buttonTitle: "OK",
                                                                      buttonStyle: .cancel)
                                             
-                                                self.blind = false
+                                                self.setBlind(false)
                                             }
             })
         }

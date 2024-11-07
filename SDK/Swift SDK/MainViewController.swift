@@ -515,10 +515,10 @@ class MainViewController: CommonViewController, UITableViewDelegate, UITableView
                 }
             })
         case (SectionIndex.bluetooth, 1):
-                self.blind = true
-                
+                self.setBlind(true)
+
                 defer {
-                    self.blind = false
+                    self.setBlind(false)
                 }
                 
                 let modelName:    String = AppDelegate.getModelName()
@@ -604,10 +604,10 @@ class MainViewController: CommonViewController, UITableViewDelegate, UITableView
     }
     
     fileprivate func confirmSerialNumber() {
-        self.blind = true
+        self.setBlind(true)
         
         defer {
-            self.blind = false
+            self.setBlind(false)
         }
         
         let portName:     String = AppDelegate.getPortName()

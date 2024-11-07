@@ -107,7 +107,7 @@ class PageModeViewController: CommonViewController, UITableViewDelegate, UITable
         
         commands = PrinterFunctions.createTextPageModeData(emulation, localizeReceipts: localizeReceipts, rect: rect, rotation: rotation, utf8: false)
         
-        self.blind = true
+        self.setBlind(true)
         
         let portName:     String = AppDelegate.getPortName()
         let portSettings: String = AppDelegate.getPortSettings()
@@ -125,7 +125,7 @@ class PageModeViewController: CommonViewController, UITableViewDelegate, UITable
                                                                      buttonTitle: "OK",
                                                                      buttonStyle: .cancel)
 
-                                                self.blind = false
+                                                self.setBlind(false)
                                             }
             })
         }

@@ -236,8 +236,8 @@ class PrinterViewController: CommonViewController, UITableViewDelegate, UITableV
                 commands = PrinterFunctions.createTextReceiptData(emulation, localizeReceipts: localizeReceipts, utf8: true)
             }
             
-            self.blind = true
-            
+            self.setBlind(true)
+
             let portName: String = AppDelegate.getPortName()
             let portSettings: String = AppDelegate.getPortSettings()
             
@@ -253,7 +253,7 @@ class PrinterViewController: CommonViewController, UITableViewDelegate, UITableV
                                                                          buttonTitle: "OK",
                                                                          buttonStyle: .cancel)
 
-                                                    self.blind = false
+                                                    self.setBlind(false)
                                                 }
                 })
             }
@@ -310,8 +310,8 @@ class PrinterViewController: CommonViewController, UITableViewDelegate, UITableV
             
             commands = builder.commands.copy() as! Data
             
-            self.blind = true
-            
+            self.setBlind(true)
+
             let portName:     String = AppDelegate.getPortName()
             let portSettings: String = AppDelegate.getPortSettings()
             
@@ -327,7 +327,7 @@ class PrinterViewController: CommonViewController, UITableViewDelegate, UITableV
                                                                          buttonTitle: "OK",
                                                                          buttonStyle: .cancel)
                                                     
-                                                    self.blind = false
+                                                    self.setBlind(false)
                                                 }
                 })
             }

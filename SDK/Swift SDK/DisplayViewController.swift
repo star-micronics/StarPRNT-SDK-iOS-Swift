@@ -101,10 +101,10 @@ class DisplayViewController: CommonViewController, UITableViewDelegate, UITableV
         
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                self.blind = true
+                self.setBlind(true)
                 
                 defer {
-                    self.blind = false
+                    self.setBlind(false)
                 }
                 
                 var port : SMPort
@@ -326,10 +326,10 @@ class DisplayViewController: CommonViewController, UITableViewDelegate, UITableV
     }
     
     func sendCommandsToPrinter(commands: Data) {
-        self.blind = true
+        self.setBlind(true)
         
         defer {
-            self.blind = false
+            self.setBlind(false)
         }
 
         var port : SMPort

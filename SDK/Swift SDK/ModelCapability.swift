@@ -160,7 +160,8 @@ class ModelCapability : NSObject {
         ModelIndex.sm_T400I_StarPRNT
     ]
     
-    static var modelCapabilityDictionary: [ModelIndex: PrinterInfo] = [
+    @MainActor
+    static let modelCapabilityDictionary: [ModelIndex: PrinterInfo] = [
         .mCPrint2: PrinterInfo("mC-Print2", .starPRNT, true, "", ["MCP20 (STR-001)", "MCP21 (STR-001)", "MCP21"],
                                true, true, true, true, false, false, true, false, true,
                                true, true, true, false, true, false),
@@ -179,7 +180,7 @@ class ModelCapability : NSObject {
         .tsp100:   PrinterInfo("TSP100", .starGraphic, true, "", ["TSP113", "TSP143"],
                                false, false, true, false, false, false, false, false, false,
                                true, false, false, false, true, false),
-        .tsp100IV: PrinterInfo("TSP100IV", .starPRNT, true, "", ["TSP143IV (STR-001)"],
+        .tsp100IV: PrinterInfo("TSP100IV", .starPRNT, true, "", ["TSP143IV (STR-001)", "TSP143IV-UEWB", "TSP143IV-UEWB SK"],
                                true, true, true, true, false, false, true, true, false,
                                true, true, true, true, true, false),
         .tsp650II: PrinterInfo("TSP650II", .starLine, true, "", ["TSP654II (STR_T-001)",
@@ -255,22 +256,27 @@ class ModelCapability : NSObject {
         return ModelCapability.modelIndexArray[index]
     }
     
+    @MainActor
     static func title(at modelIndex: ModelIndex) -> String? {
         return ModelCapability.modelCapabilityDictionary[modelIndex]?.title
     }
     
+    @MainActor
     static func emulation(at modelIndex: ModelIndex) -> StarIoExtEmulation? {
         return ModelCapability.modelCapabilityDictionary[modelIndex]?.emulation
     }
     
+    @MainActor
     static func supportedExternalCashDrawer(at modelIndex: ModelIndex) -> Bool? {
         return ModelCapability.modelCapabilityDictionary[modelIndex]?.supportedExternalCashDrawer
     }
     
+    @MainActor
     static func portSettings(at modelIndex: ModelIndex) -> String? {
         return ModelCapability.modelCapabilityDictionary[modelIndex]?.portSettings
     }
     
+    @MainActor
     static func modelIndex(of modelName: String) -> ModelIndex? {
         for (modelIndex, printerInfo) in ModelCapability.modelCapabilityDictionary {
             for i: Int in 0 ..< printerInfo.modelNameArray.count {

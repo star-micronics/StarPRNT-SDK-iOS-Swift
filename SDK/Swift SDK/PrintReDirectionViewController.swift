@@ -280,12 +280,12 @@ class PrintReDirectionViewController: PrinterViewController {
                                                                   utf8: true)
             }
             
-            self.blind = true
+            self.setBlind(true)
             
             Communication.sendCommandsForPrintReDirection(commands,
                                                           timeout: 10000) { (communicationResultArray) in
-                                                            self.blind = false
-                                                            
+                                                            self.setBlind(false)
+
                                                             var message: String = ""
                                                             
                                                             for i in 0..<communicationResultArray.count {

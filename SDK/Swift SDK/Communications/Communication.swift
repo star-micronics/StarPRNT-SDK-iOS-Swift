@@ -617,6 +617,7 @@ class Communication {
         return result == .success
     }
     
+    @MainActor
     static func sendCommandsForPrintReDirection(_ commands: Data!,
                                                 timeout: UInt32,
                                                 completionHandler: PrintRedirectionCompletionHandler?) {

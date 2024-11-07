@@ -9,6 +9,7 @@
 import UIKit
 
 protocol TextViewTableViewCellDelegate {
+    @MainActor
     func shouldChangeCharactersIn(tableViewCellTag tag: Int, textValue: String, range: NSRange, replacementString string: String) -> Bool
 }
 
@@ -23,7 +24,10 @@ class TextViewTableViewCell: UITableViewCell, UITextFieldDelegate {
         super.awakeFromNib()
         // Initialization code
         
-        textField.delegate = self
+        DispatchQueue.main.async {
+            self.textField.delegate = self
+        }
+
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

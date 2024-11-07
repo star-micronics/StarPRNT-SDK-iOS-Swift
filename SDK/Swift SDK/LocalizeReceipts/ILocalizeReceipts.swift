@@ -83,6 +83,7 @@ class ILocalizeReceipts {
         }
     }
     
+    @MainActor
     func createRasterReceiptImage() -> UIImage? {
         let image: UIImage?
         
@@ -103,6 +104,7 @@ class ILocalizeReceipts {
         return image
     }
     
+    @MainActor
     func createScaleRasterReceiptImage() -> UIImage? {
         let image: UIImage?
         
@@ -131,22 +133,27 @@ class ILocalizeReceipts {
     func append4inchTextReceiptData(_ builder: ISCBBuilder, utf8: Bool) {     // abstract!!!
     }
     
+    @MainActor
     func create2inchRasterReceiptImage() -> UIImage? {     // abstract!!!
         return nil
     }
     
+    @MainActor
     func create3inchRasterReceiptImage() -> UIImage? {     // abstract!!!
         return nil
     }
     
+    @MainActor
     func create4inchRasterReceiptImage() -> UIImage? {     // abstract!!!
         return nil
     }
     
+    @MainActor
     func createCouponImage() -> UIImage? {     // abstract!!!
         return nil
     }
     
+    @MainActor
     func createEscPos3inchRasterReceiptImage() -> UIImage? {     // abstract!!!
         return nil
     }
@@ -167,6 +174,7 @@ class ILocalizeReceipts {
     func appendPasteTextLabelData(_ builder: ISCBBuilder, pasteText: String, utf8: Bool) {     // abstract!!!
     }
     
+    @MainActor
     static func imageWithString(_ string: String, font: UIFont, width: CGFloat) -> UIImage {
         let attributeDic: NSDictionary = NSDictionary(dictionary: [NSAttributedString.Key.font : font])
         

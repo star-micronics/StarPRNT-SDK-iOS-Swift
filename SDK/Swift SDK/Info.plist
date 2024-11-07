@@ -33,6 +33,8 @@
 	<string>Use Bluetooth for communication with the printer.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>Use Bluetooth for communication with the printer.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Use Local Network for communication with the printer or discovery the printers.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Use a Photo file as print data.</string>
 	<key>NSPhotoLibraryUsageDescription</key>

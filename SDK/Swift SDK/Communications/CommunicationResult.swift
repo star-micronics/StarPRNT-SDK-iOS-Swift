@@ -7,9 +7,9 @@
 
 import Foundation
 
-class CommunicationResult {
-    var result: Result
-    var code: Int
+struct CommunicationResult: Sendable {
+    let result: Result
+    let code: Int
     
     init(_ result: Result, _ code: Int) {
         self.result = result
@@ -17,7 +17,7 @@ class CommunicationResult {
     }
 }
 
-enum Result {
+enum Result: Sendable {
     case success
     case errorOpenPort
     case errorBeginCheckedBlock

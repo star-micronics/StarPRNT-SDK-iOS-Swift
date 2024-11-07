@@ -105,8 +105,8 @@ class BlackMarkPasteViewController: CommonViewController, UITextViewDelegate {
         
         commands = PrinterFunctions.createPasteTextBlackMarkData(emulation, localizeReceipts: localizeReceipts, pasteText: textView.text, doubleHeight: doubleHeightSwitch.isOn, type: type, utf8: false)
         
-        self.blind = true
-        
+        self.setBlind(true)
+
         let portName:     String = AppDelegate.getPortName()
         let portSettings: String = AppDelegate.getPortSettings()
         let timeout:      UInt32 = 10000                             // 10000mS!!!
@@ -123,7 +123,7 @@ class BlackMarkPasteViewController: CommonViewController, UITextViewDelegate {
                                                                      buttonTitle: "OK",
                                                                      buttonStyle: .cancel)
                                                 
-                                                self.blind = false
+                                                self.setBlind(false)
                                             }
             })
         }

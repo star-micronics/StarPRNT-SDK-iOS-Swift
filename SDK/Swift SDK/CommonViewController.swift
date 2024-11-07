@@ -23,7 +23,7 @@ class CommonViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    var blind: Bool {
+    private var blind: Bool {
         get {
             return self.navigationItem.hidesBackButton
         }
@@ -54,6 +54,10 @@ class CommonViewController: UIViewController {
 //                RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.1))     // Update View(No need)
             }
         }
+    }
+    
+    func setBlind(_ value: Bool) {
+        self.blind = value
     }
     
     func appendRefreshButton(_ action: Selector) {

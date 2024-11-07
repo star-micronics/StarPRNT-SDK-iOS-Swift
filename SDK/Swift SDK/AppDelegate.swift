@@ -29,7 +29,7 @@ enum PaperSizeIndex: Int {
     case dotImpactThreeInch = 210
 }
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     static let settingManager = SettingManager()

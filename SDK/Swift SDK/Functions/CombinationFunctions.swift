@@ -25,6 +25,7 @@ class CombinationFunctions {
         return builder.commands.copy() as! Data
     }
     
+    @MainActor
     static func createRasterReceiptData(_ emulation: StarIoExtEmulation, localizeReceipts: ILocalizeReceipts) -> Data {
         let image: UIImage = localizeReceipts.createRasterReceiptImage()!
         
@@ -43,6 +44,7 @@ class CombinationFunctions {
         return builder.commands.copy() as! Data
     }
     
+    @MainActor
     static func createScaleRasterReceiptData(_ emulation: StarIoExtEmulation, localizeReceipts: ILocalizeReceipts, width: Int, bothScale: Bool) -> Data {
         let image: UIImage = localizeReceipts.createScaleRasterReceiptImage()!
         
@@ -61,6 +63,7 @@ class CombinationFunctions {
         return builder.commands.copy() as! Data
     }
     
+    @MainActor
     static func createCouponData(_ emulation: StarIoExtEmulation, localizeReceipts: ILocalizeReceipts, width: Int, rotation: SCBBitmapConverterRotation) -> Data {
         let image: UIImage = localizeReceipts.createCouponImage()!
         

@@ -27,23 +27,25 @@ class HoldPrintViewController: CommonViewController, UITableViewDelegate, UITabl
         let portSettings: String = AppDelegate.getPortSettings()
         let emulation: StarIoExtEmulation = AppDelegate.getEmulation()
         
-        var isHoldArray: [Bool]
+        var isHoldArrayTmp: [Bool]
         
         switch holdingControlTableView.indexPathForSelectedRow?.row {
         case 0: // Always hold
-            isHoldArray = [true, true, true]
+            isHoldArrayTmp = [true, true, true]
         case 1: // Hold before printing the last page
-            isHoldArray = [false, true, false]
+            isHoldArrayTmp = [false, true, false]
         case 2: // Do not Hold
-            isHoldArray = [false, false, false]
+            isHoldArrayTmp = [false, false, false]
         default:
             fatalError()
         }
         
+        let isHoldArray = isHoldArrayTmp
+        
         let commandArray = PrinterFunctions.createHoldPrintData(emulation, isHoldArray: isHoldArray)
         
-        self.blind = true
-        
+        self.setBlind(true)
+
         let removePaperAlert = UIAlertController.init(title: "Confirm", message: "Please remove paper from printer.", preferredStyle: UIAlertController.Style.alert)
         
         GlobalQueueManager.shared.serialQueue.async {
@@ -54,27 +56,27 @@ class HoldPrintViewController: CommonViewController, UITableViewDelegate, UITabl
                                                         holdPrintTimeout: 10000,
                                                         pageStartHandler: nil,
                                                         pageFinishHandler:  { (index: Int) in
-                                                            DispatchQueue.main.async {
-                                                                removePaperAlert.dismiss(animated: true, completion: nil)
-                                                                
-                                                                if !isHoldArray[index] || index == isHoldArray.count - 1 {
-                                                                    return
-                                                                }
-                                                                
-                                                                self.present(removePaperAlert, animated: true, completion: nil)
-                                                            }
-                                                        },
+                DispatchQueue.main.async {
+                    removePaperAlert.dismiss(animated: true, completion: nil)
+                    
+                    if !isHoldArray[index] || index == isHoldArray.count - 1 {
+                        return
+                    }
+                    
+                    self.present(removePaperAlert, animated: true, completion: nil)
+                }
+            },
                                                         completionHandler:  { (communicationResult: CommunicationResult) in
-                                                            DispatchQueue.main.async {
-                                                                removePaperAlert.dismiss(animated: true, completion: nil)
-                                                                
-                                                                self.showSimpleAlert(title: "Communication Result",
-                                                                                     message: Communication.getCommunicationResultMessage(communicationResult),
-                                                                                     buttonTitle: "OK",
-                                                                                     buttonStyle: .cancel)
-                                                                
-                                                                self.blind = false
-                                                            }
+                DispatchQueue.main.async {
+                    removePaperAlert.dismiss(animated: true, completion: nil)
+                    
+                    self.showSimpleAlert(title: "Communication Result",
+                                         message: Communication.getCommunicationResultMessage(communicationResult),
+                                         buttonTitle: "OK",
+                                         buttonStyle: .cancel)
+                    
+                    self.setBlind(false)
+                }
             })
         }
     }

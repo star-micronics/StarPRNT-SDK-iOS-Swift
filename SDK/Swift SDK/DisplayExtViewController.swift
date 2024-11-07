@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+class DisplayExtViewController: CommonLabelViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     enum DisplayStatus: Int {
         case invalid = 0
         case impossible
@@ -20,17 +20,15 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
     
     @IBOutlet weak var pickerView: UIPickerView!
     
-    @IBOutlet weak var commentLabel: UILabel!
-    
     var port: SMPort!
     
     var displayStatus: DisplayStatus!
     
-    var lock: NSRecursiveLock!
+    let lock = NSRecursiveLock()
     
-    var dispatchGroup: DispatchGroup!
+    let dispatchGroup = DispatchGroup()
     
-    var terminateTaskSemaphore: DispatchSemaphore!
+    let terminateTaskSemaphore = DispatchSemaphore(value: 1)
     
     var selectedIndexPath: IndexPath!
     
@@ -41,21 +39,11 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.commentLabel.text = ""
-        
-        self.commentLabel.adjustsFontSizeToFitWidth = true
-        
         self.appendRefreshButton(#selector(DisplayExtViewController.refreshDisplay))
         
         self.port = nil
         
         self.displayStatus = DisplayStatus.invalid
-        
-        self.lock = NSRecursiveLock()
-        
-        self.dispatchGroup = DispatchGroup()
-        
-        self.terminateTaskSemaphore = DispatchSemaphore(value: 1)
         
         self.selectedIndexPath = nil
         
@@ -85,7 +73,9 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
         super.viewWillDisappear(animated)
         
         GlobalQueueManager.shared.serialQueue.async {
-            _ = self.disconnect()
+            DispatchQueue.main.async {
+                _ = self.disconnect()
+            }
         }
         
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIApplicationWillResignActiveNotification"), object: nil)
@@ -104,7 +94,9 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
     
     @objc func applicationWillResignActive() {
         GlobalQueueManager.shared.serialQueue.async {
-            _ = self.disconnect()
+            DispatchQueue.main.async {
+                _ = self.disconnect()
+            }
         }
     }
     
@@ -216,28 +208,30 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
 //      let commands: Data = builder.commands           .copy() as! Data
         let commands: Data = builder.passThroughCommands.copy() as! Data
         
-        self.blind = true
-        
+        self.setBlind(true)
+
         self.lock.lock()
         
         if self.displayStatus == DisplayStatus.connect {
             GlobalQueueManager.shared.serialQueue.async {
-                _ = Communication.sendCommandsDoNotCheckCondition(commands,
-                                                                  port: self.port,
-                                                                  completionHandler: { (communicationResult: CommunicationResult) in
-                    DispatchQueue.main.async {
-                        if communicationResult.result != .success {
-                            self.showSimpleAlert(title: "Communication Result",
-                                                 message: Communication.getCommunicationResultMessage(communicationResult),
-                                                 buttonTitle: "OK",
-                                                 buttonStyle: .cancel)
+                DispatchQueue.main.async {
+                    _ = Communication.sendCommandsDoNotCheckCondition(commands,
+                                                                      port: self.port,
+                                                                      completionHandler: { (communicationResult: CommunicationResult) in
+                        DispatchQueue.main.async {
+                            if communicationResult.result != .success {
+                                self.showSimpleAlert(title: "Communication Result",
+                                                     message: Communication.getCommunicationResultMessage(communicationResult),
+                                                     buttonTitle: "OK",
+                                                     buttonStyle: .cancel)
+                            }
+                            
+                            self.lock.unlock()
+                            
+                            self.setBlind(false)
                         }
-                        
-                        self.lock.unlock()
-                        
-                        self.blind = false
-                    }
-                })
+                    })
+                }
             }
         }
         else {
@@ -248,7 +242,7 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
             
             self.lock.unlock()
             
-            self.blind = false
+            self.setBlind(false)
         }
     }
     
@@ -438,28 +432,30 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
 //      let commands: Data = builder.commands           .copy() as! Data
         let commands: Data = builder.passThroughCommands.copy() as! Data
         
-        self.blind = true
+        self.setBlind(true)
         
         self.lock.lock()
         
         if self.displayStatus == DisplayStatus.connect {
             GlobalQueueManager.shared.serialQueue.async {
-                _ = Communication.sendCommandsDoNotCheckCondition(commands,
-                                                                  port: self.port,
-                                                                  completionHandler: { (communicationResult: CommunicationResult) in
-                    DispatchQueue.main.async {
-                        if communicationResult.result != .success {
-                            self.showSimpleAlert(title: "Communication Result",
-                                                 message: Communication.getCommunicationResultMessage(communicationResult),
-                                                 buttonTitle: "OK",
-                                                 buttonStyle: .cancel)
+                DispatchQueue.main.async {
+                    _ = Communication.sendCommandsDoNotCheckCondition(commands,
+                                                                      port: self.port,
+                                                                      completionHandler: { (communicationResult: CommunicationResult) in
+                        DispatchQueue.main.async {
+                            if communicationResult.result != .success {
+                                self.showSimpleAlert(title: "Communication Result",
+                                                     message: Communication.getCommunicationResultMessage(communicationResult),
+                                                     buttonTitle: "OK",
+                                                     buttonStyle: .cancel)
+                            }
+                            
+                            self.lock.unlock()
+                            
+                            self.setBlind(false)
                         }
-                        
-                        self.lock.unlock()
-                        
-                        self.blind = false
-                    }
-                })
+                    })
+                }
             }
         }
         else {
@@ -470,7 +466,7 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
             
             self.lock.unlock()
             
-            self.blind = false
+            self.setBlind(false)
         }
     }
 
@@ -479,10 +475,10 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
     }
     
     @objc func refreshDisplay() {
-        self.blind = true
-        
+        self.setBlind(true)
+
         defer {
-            self.blind = false
+            self.setBlind(false)
         }
         
         _ = self.disconnect()
@@ -493,16 +489,13 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
                                  buttonTitle: "OK",
                                  buttonStyle: .cancel,
                                  completion: { _ in
-                                    self.commentLabel.text = """
+                self.setCommentLabel(text: """
                                     Check the device. (Power and Bluetooth pairing)
                                     Then touch up the Refresh button.
-                                    """
+                                    """,
+                                     color: UIColor.red)
                                     
-                                    self.commentLabel.textColor = UIColor.red
-                                    
-                                    self.beginAnimationCommantLabel()
-                                    
-                                    self.commentLabel.isHidden = false
+                self.setCommentLabelHidden(false)
             })
         }
     }
@@ -533,8 +526,10 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
                 
                 _ = self.terminateTaskSemaphore.wait(timeout: DispatchTime.distantFuture)
                 
+                let serialQueue = GlobalQueueManager.shared.serialQueue
+                
                 DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(group: self.dispatchGroup) { () -> Void in
-                    self.watchDisplayTask()
+                    self.watchDisplayTask(serialQueue)
                 }
                 
                 result = true
@@ -573,7 +568,7 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
         return result
     }
     
-    func watchDisplayTask() {
+    nonisolated func watchDisplayTask(_ serialQueue : DispatchQueue) {
         var terminate: Bool = false
         
         while terminate == false {
@@ -584,66 +579,67 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
                 if self.lock.try() {
                     portValid = false
                     
-                    if self.port != nil {
-                        if self.port.connected() == true {
-                            portValid = true
+                    let portCheckSemaphore: DispatchSemaphore = DispatchSemaphore(value: 0)
+                    
+                    DispatchQueue.main.async {
+                        if self.port != nil {
+                            if self.port.connected() == true {
+                                portValid = true
+                            }
                         }
+                        portCheckSemaphore.signal()
                     }
+                    _ = portCheckSemaphore.wait(timeout: DispatchTime.distantFuture)
                     
                     if portValid == true {
-                        let parser: ISCPConnectParser = StarIoExt.createDisplayConnectParser(StarIoExtDisplayModel.SCD222)
                         
                         let semaphore: DispatchSemaphore = DispatchSemaphore(value: 0)
                         
-                        GlobalQueueManager.shared.serialQueue.async {
-                            _ = Communication.parseDoNotCheckCondition(parser,
-                                                                       port: self.port,
-                                                                       completionHandler: { (communicationResult: CommunicationResult) in
-                                DispatchQueue.main.async(execute: {
+                        serialQueue.async {
+                            DispatchQueue.main.async {
+                                let parser: ISCPConnectParser = StarIoExt.createDisplayConnectParser(StarIoExtDisplayModel.SCD222)
+                                _ = Communication.parseDoNotCheckCondition(parser,
+                                                                           port: self.port,
+                                                                           completionHandler: { (communicationResult: CommunicationResult) in
+                                    
                                     if communicationResult.result == .success {
                                         if parser.connect() == true {
-                                            if self.displayStatus != DisplayStatus.connect {
-                                                self.displayStatus = DisplayStatus.connect
-                                                
-//                                              self.commentLabel.text = "Accessory Connect Success."
-//
-//                                              self.commentLabel.textColor = UIColor.blue
-//
-//                                              self.beginAnimationCommantLabel()
-                                                
-                                                self.commentLabel.isHidden = true
-                                            }
+                                            DispatchQueue.main.async(execute: {
+                                                if self.displayStatus != DisplayStatus.connect {
+                                                    self.displayStatus = DisplayStatus.connect
+                                                    
+                                                    self.setCommentLabel(text: "Accessory Connect Success.", color: UIColor.blue)
+                                                    
+                                                    self.setCommentLabelHidden(true)
+                                                }
+                                            })
                                         }
                                         else {
-                                            if self.displayStatus != DisplayStatus.disconnect {
-                                                self.displayStatus = DisplayStatus.disconnect
-                                                
-                                                self.commentLabel.text = "Display Disconnect."
-                                                
-                                                self.commentLabel.textColor = UIColor.red
-                                                
-                                                self.beginAnimationCommantLabel()
-                                                
-                                                self.commentLabel.isHidden = false
-                                            }
+                                            DispatchQueue.main.async(execute: {
+                                                if self.displayStatus != DisplayStatus.disconnect {
+                                                    self.displayStatus = DisplayStatus.disconnect
+                                                    
+                                                    self.setCommentLabel(text: "Display Disconnect.", color: UIColor.red)
+                                                    
+                                                    self.setCommentLabelHidden(false)
+                                                }
+                                            })
                                         }
                                     }
                                     else {
-                                        if self.displayStatus != DisplayStatus.impossible {
-                                            self.displayStatus = DisplayStatus.impossible
-                                            
-//                                          self.commentLabel.text = "Display Impossible."
-                                            self.commentLabel.text = "Printer Impossible."
-                                            
-                                            self.commentLabel.textColor = UIColor.red
-                                            
-                                            self.beginAnimationCommantLabel()
-                                            
-                                            self.commentLabel.isHidden = false
-                                        }
+                                        DispatchQueue.main.async(execute: {
+                                            if self.displayStatus != DisplayStatus.impossible {
+                                                self.displayStatus = DisplayStatus.impossible
+                                                
+                                                self.setCommentLabel(text: "Printer Impossible.", color: UIColor.red)
+                                                
+                                                self.setCommentLabelHidden(false)
+                                            }
+                                        })
                                     }
+                                    
                                 })
-                            })
+                            }
                             
                             semaphore.signal()
                         }
@@ -655,14 +651,9 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
                             if self.displayStatus != DisplayStatus.impossible {
                                 self.displayStatus = DisplayStatus.impossible
                                 
-//                              self.commentLabel.text = "Display Impossible."
-                                self.commentLabel.text = "Printer Impossible."
+                                self.setCommentLabel(text: "Printer Impossible.", color: UIColor.red)
                                 
-                                self.commentLabel.textColor = UIColor.red
-                                
-                                self.beginAnimationCommantLabel()
-                                
-                                self.commentLabel.isHidden = false
+                                self.setCommentLabelHidden(false)
                             }
                         })
                     }
@@ -683,18 +674,4 @@ class DisplayExtViewController: CommonViewController, UITableViewDelegate, UITab
         }
     }
     
-    func beginAnimationCommantLabel() {
-        self.commentLabel.alpha = 0.0
-        
-        UIView.animate(withDuration: 0.6,
-                       delay: 0,
-                       options: [.repeat, .autoreverse, .curveEaseIn],
-                       animations: {
-            self.commentLabel.alpha = 1.0
-        })
-    }
-    
-    func endAnimationCommantLabel() {
-        self.commentLabel.layer.removeAllAnimations()
-    }
 }

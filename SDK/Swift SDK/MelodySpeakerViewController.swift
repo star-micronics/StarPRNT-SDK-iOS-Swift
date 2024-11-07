@@ -273,10 +273,10 @@ class MelodySpeakerViewController: CommonViewController {
             return
         }
         
-        self.blind = true
-        
+        self.setBlind(true)
+
         defer {
-            self.blind = false
+            self.setBlind(false)
         }
         
         var port : SMPort

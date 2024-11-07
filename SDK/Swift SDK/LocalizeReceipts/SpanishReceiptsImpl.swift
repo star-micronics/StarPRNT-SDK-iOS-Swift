@@ -204,6 +204,7 @@ class SpanishReceiptsImpl: ILocalizeReceipts {
         builder.appendBarcodeData("{BStar.".data(using: String.Encoding.ascii), symbology: SCBBarcodeSymbology.code128, width: SCBBarcodeWidth.mode2, height: 40, hri: true)
     }
     
+    @MainActor
     override func create2inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
         "     BAR RESTAURANT\n" +
@@ -232,6 +233,7 @@ class SpanishReceiptsImpl: ILocalizeReceipts {
         return ILocalizeReceipts.imageWithString(textToPrint, font: font, width: 384)     // 2inch(384dots)
     }
     
+    @MainActor
     override func create3inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
         "                        BAR RESTAURANT\n" +
@@ -259,6 +261,7 @@ class SpanishReceiptsImpl: ILocalizeReceipts {
         return ILocalizeReceipts.imageWithString(textToPrint, font: font, width: 576)     // 3inch(576dots)
     }
     
+    @MainActor
     override func create4inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
         "                                   BAR RESTAURANT EL POZO\n" +
@@ -287,6 +290,7 @@ class SpanishReceiptsImpl: ILocalizeReceipts {
         return UIImage(named: "SpanishCouponImage.png")!
     }
     
+    @MainActor
     override func createEscPos3inchRasterReceiptImage() -> UIImage {
         let textToPrint: String =
         "                     BAR RESTAURANT\n" +

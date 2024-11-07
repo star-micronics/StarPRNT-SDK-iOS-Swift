@@ -8,9 +8,7 @@
 
 import UIKit
 
-class CashDrawerExtViewController: CommonViewController, StarIoExtManagerDelegate {
-    @IBOutlet weak var commentLabel: UILabel!
-    
+class CashDrawerExtViewController: CommonLabelViewController, StarIoExtManagerDelegate {
     @IBOutlet weak var openButton: UIButton!
     
     var starIoExtManager: StarIoExtManager!
@@ -20,10 +18,6 @@ class CashDrawerExtViewController: CommonViewController, StarIoExtManagerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.commentLabel.text = ""
-        
-        self.commentLabel.adjustsFontSizeToFitWidth = true
         
         self.openButton.isEnabled           = true
         self.openButton.backgroundColor   = UIColor.cyan
@@ -80,7 +74,9 @@ class CashDrawerExtViewController: CommonViewController, StarIoExtManagerDelegat
         super.viewWillDisappear(animated)
         
         GlobalQueueManager.shared.serialQueue.async {
-            self.starIoExtManager.disconnect()
+            DispatchQueue.main.async {
+                self.starIoExtManager.disconnect()
+            }
         }
         
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIApplicationWillResignActiveNotification"), object: nil)
@@ -99,7 +95,9 @@ class CashDrawerExtViewController: CommonViewController, StarIoExtManagerDelegat
     
     @objc func applicationWillResignActive() {
         GlobalQueueManager.shared.serialQueue.async {
-            self.starIoExtManager.disconnect()
+            DispatchQueue.main.async {
+                self.starIoExtManager.disconnect()
+            }
         }
     }
     
@@ -116,56 +114,60 @@ class CashDrawerExtViewController: CommonViewController, StarIoExtManagerDelegat
         
         switch AppDelegate.getSelectedIndex() {
         case 0, 2 :
-            self.blind = true
+            self.setBlind(true)
             
             self.starIoExtManager.lock.lock()
             
             GlobalQueueManager.shared.serialQueue.async {
-                _ = Communication.sendCommands(commands,
-                                               port: self.starIoExtManager.port,
-                                               completionHandler: { (communicationResult: CommunicationResult) in
-                    DispatchQueue.main.async {
-                        self.showSimpleAlert(title: "Communication Result",
-                                             message: Communication.getCommunicationResultMessage(communicationResult),
-                                             buttonTitle: "OK",
-                                             buttonStyle: .cancel)
-                        
-                        self.starIoExtManager.lock.unlock()
-                        
-                        self.blind = false
-                    }
-                })
+                DispatchQueue.main.async {
+                    _ = Communication.sendCommands(commands,
+                                                   port: self.starIoExtManager.port,
+                                                   completionHandler: { (communicationResult: CommunicationResult) in
+                        DispatchQueue.main.async {
+                            self.showSimpleAlert(title: "Communication Result",
+                                                 message: Communication.getCommunicationResultMessage(communicationResult),
+                                                 buttonTitle: "OK",
+                                                 buttonStyle: .cancel)
+                            
+                            self.starIoExtManager.lock.unlock()
+                            
+                            self.setBlind(false)
+                        }
+                    })
+                }
             }
 //      case 1, 3 :
         default   :
-            self.blind = true
-            
+            self.setBlind(true)
+
             self.starIoExtManager.lock.lock()
             
             GlobalQueueManager.shared.serialQueue.async {
-                _ = Communication.sendCommandsDoNotCheckCondition(commands,
-                                                                  port: self.starIoExtManager.port,
-                                                                  completionHandler: { (communicationResult: CommunicationResult) in
-                    DispatchQueue.main.async {
-                        self.showSimpleAlert(title: "Communication Result",
-                                             message: Communication.getCommunicationResultMessage(communicationResult),
-                                             buttonTitle: "OK",
-                                             buttonStyle: .cancel)
-                        
-                        self.starIoExtManager.lock.unlock()
-                        
-                        self.blind = false
-                    }
-                })
+                DispatchQueue.main.async {
+                    _ = Communication.sendCommandsDoNotCheckCondition(commands,
+                                                                      port: self.starIoExtManager.port,
+                                                                      completionHandler: { (communicationResult: CommunicationResult) in
+                        DispatchQueue.main.async {
+                            self.showSimpleAlert(title: "Communication Result",
+                                                 message: Communication.getCommunicationResultMessage(communicationResult),
+                                                 buttonTitle: "OK",
+                                                 buttonStyle: .cancel)
+                            
+                            self.starIoExtManager.lock.unlock()
+                            
+                            self.setBlind(false)
+                        }
+                    })
+                }
             }
         }
     }
     
     @objc func refreshCashDrawer() {
-        self.blind = true
+        self.setBlind(true)
         
         defer {
-            self.blind = false
+            self.setBlind(false)
         }
         
         self.starIoExtManager.disconnect()
@@ -176,97 +178,69 @@ class CashDrawerExtViewController: CommonViewController, StarIoExtManagerDelegat
                                  buttonTitle: "OK",
                                  buttonStyle: .cancel,
                                  completion: { _ in
-                self.commentLabel.text = """
-                Check the device. (Power and Bluetooth pairing)
-                Then touch up the Refresh button.
-                """
-                
-                self.commentLabel.textColor = UIColor.red
-                
-                self.beginAnimationCommantLabel()
+                self.setCommentLabel(text: """
+                                    Check the device. (Power and Bluetooth pairing)
+                                    Then touch up the Refresh button.
+                                    """,
+                                color: UIColor.red)
             })
         }
     }
     
-    func didPrinterImpossible(_ manager: StarIoExtManager!) {
+    nonisolated func didPrinterImpossible(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Printer Impossible."
-        
-        self.commentLabel.textColor = UIColor.red
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Printer Impossible.", color: UIColor.red)
+        }
     }
-    
-    func didCashDrawerOpen(_ manager: StarIoExtManager!) {
+
+    nonisolated func didCashDrawerOpen(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Cash Drawer Open."
-        
-//      self.commentLabel.textColor = UIColor.red
-        self.commentLabel.textColor = UIColor.magenta
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Cash Drawer Open.", color: UIColor.magenta)
+        }
     }
     
-    func didCashDrawerClose(_ manager: StarIoExtManager!) {
+    nonisolated func didCashDrawerClose(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Cash Drawer Close."
-        
-        self.commentLabel.textColor = UIColor.blue
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Cash Drawer Close.", color: UIColor.blue)
+        }
     }
-    
-    func didAccessoryConnectSuccess(_ manager: StarIoExtManager!) {
+
+    nonisolated func didAccessoryConnectSuccess(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Accessory Connect Success."
-        
-        self.commentLabel.textColor = UIColor.blue
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Accessory Connect Success.", color: UIColor.blue)
+        }
     }
     
-    func didAccessoryConnectFailure(_ manager: StarIoExtManager!) {
+    nonisolated func didAccessoryConnectFailure(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Accessory Connect Failure."
-        
-        self.commentLabel.textColor = UIColor.red
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Accessory Connect Failure.", color: UIColor.red)
+        }
     }
     
-    func didAccessoryDisconnect(_ manager: StarIoExtManager!) {
+    nonisolated func didAccessoryDisconnect(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Accessory Disconnect."
-        
-        self.commentLabel.textColor = UIColor.red
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Accessory Disconnect.", color: UIColor.red)
+        }
     }
     
-    func didStatusUpdate(_ manager: StarIoExtManager!, status: String!) {
+    nonisolated func didStatusUpdate(_ manager: StarIoExtManager!, status: String!) {
         NSLog("%@", MakePrettyFunction())
         
-//      self.commentLabel.text = status
-//
-//      self.commentLabel.textColor = UIColor.green
-//
-//      self.beginAnimationCommantLabel()
+        Task {
+//            await self.setCommentLabel(text: status, color: UIColor.green)
+        }
     }
-    
-    fileprivate func beginAnimationCommantLabel() {
-        self.commentLabel.alpha = 0.0
-        
-        UIView.animate(withDuration: 0.6,
-                       delay: 0,
-                       options: [.repeat, .autoreverse, .curveEaseIn],
-                       animations: {
-            self.commentLabel.alpha = 1.0
-        })
-    }
+
 }

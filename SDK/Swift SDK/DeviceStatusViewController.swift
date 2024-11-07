@@ -110,10 +110,10 @@ class DeviceStatusViewController: CommonViewController, UITableViewDelegate, UIT
     }
     
     @objc func refreshDeviceStatus() {
-        self.blind = true
+        self.setBlind(true)
         
         defer {
-            self.blind = false
+            self.setBlind(false)
         }
         
         self.statusCellArray.removeAllObjects()

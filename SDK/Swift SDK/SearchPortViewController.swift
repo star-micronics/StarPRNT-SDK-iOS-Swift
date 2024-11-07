@@ -543,10 +543,10 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
     }
     
     func didSelectRefreshPortInterfaceType(buttonIndex: Int) {
-        self.blind = true
-        
+        self.setBlind(true)
+
         defer {
-            self.blind = false
+            self.setBlind(false)
         }
         
         self.cellArray.removeAllObjects()

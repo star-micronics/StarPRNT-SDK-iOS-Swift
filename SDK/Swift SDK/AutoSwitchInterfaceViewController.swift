@@ -19,7 +19,7 @@ class AutoSwitchInterfaceViewController: CommonViewController {
         
         let commands = PrinterFunctions.createRasterReceiptData(AppDelegate.getEmulation(), localizeReceipts: localizeReceipts)
         
-        self.blind = true
+        self.setBlind(true)
         
         let portSettings: String = AppDelegate.getPortSettings()
         
@@ -34,7 +34,7 @@ class AutoSwitchInterfaceViewController: CommonViewController {
                                              buttonTitle: "OK",
                                              buttonStyle: .cancel)
                         
-                        self.blind = false
+                        self.setBlind(false)
                     }
             })
         }

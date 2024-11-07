@@ -22,7 +22,7 @@ class PrinterExtWithConnectAsyncViewController: PrinterExtViewController {
     }
     
     override func refreshPrinter() {
-        self.blind = true
+        self.setBlind(true)
         
         self.starIoExtManager.disconnect()
         
@@ -47,25 +47,27 @@ class PrinterExtWithConnectAsyncViewController: PrinterExtViewController {
                                                                 localizeReceipts: localizeReceipts)
         }
         
-        self.blind = true
+        self.setBlind(true)
         
         self.starIoExtManager.lock.lock()
         
         GlobalQueueManager.shared.serialQueue.async {
-            _ = Communication.sendCommands(commands,
-                                           port: self.starIoExtManager.port,
-                                           completionHandler: { (communicationResult: CommunicationResult) in
-                DispatchQueue.main.async {
-                    self.showSimpleAlert(title: "Communication Result",
-                                         message: Communication.getCommunicationResultMessage(communicationResult),
-                                         buttonTitle: "OK",
-                                         buttonStyle: .cancel)
-                    
-                    self.starIoExtManager.lock.unlock()
-                    
-                    self.blind = false
-                }
-            })
+            DispatchQueue.main.async {
+                _ = Communication.sendCommands(commands,
+                                               port: self.starIoExtManager.port,
+                                               completionHandler: { (communicationResult: CommunicationResult) in
+                    DispatchQueue.main.async {
+                        self.showSimpleAlert(title: "Communication Result",
+                                             message: Communication.getCommunicationResultMessage(communicationResult),
+                                             buttonTitle: "OK",
+                                             buttonStyle: .cancel)
+                        
+                        self.starIoExtManager.lock.unlock()
+                        
+                        self.setBlind(false)
+                    }
+                })
+            }
         }
     }
     
@@ -74,7 +76,7 @@ class PrinterExtWithConnectAsyncViewController: PrinterExtViewController {
             self.starIoExtManager.port != nil {
             self.printButton.sendActions(for: UIControl.Event.touchUpInside)
         } else {
-            self.blind = false
+            self.setBlind(false)
         }
         
         self.didAppear = true
@@ -87,18 +89,15 @@ class PrinterExtWithConnectAsyncViewController: PrinterExtViewController {
                                  buttonTitle: "OK",
                                  buttonStyle: .cancel,
                                  completion: { _ in
-                                    self.commentLabel.text = """
+                self.setCommentLabel(text: """
                                     \(error.localizedDescription)
                                     
                                     Check the device. (Power and Bluetooth pairing)
                                     Then touch up the Refresh button.
-                                    """
-                                    
-                                    self.commentLabel.textColor = UIColor.red
-                                    
-                                    self.beginAnimationCommantLabel()
-
-                                    self.blind = false
+                                    """,
+                                     color: UIColor.red)
+                   
+                self.setBlind(false)
             })
         }
         

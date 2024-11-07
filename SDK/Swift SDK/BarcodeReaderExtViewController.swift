@@ -8,14 +8,12 @@
 
 import UIKit
 
-class BarcodeReaderExtViewController: CommonViewController, StarIoExtManagerDelegate, UITableViewDelegate, UITableViewDataSource {
+class BarcodeReaderExtViewController: CommonLabelViewController, StarIoExtManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     enum CellParamIndex: Int {
         case barcodeData = 0
     }
     
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var commentLabel: UILabel!
     
     var cellArray: NSMutableArray!
     
@@ -24,10 +22,6 @@ class BarcodeReaderExtViewController: CommonViewController, StarIoExtManagerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.commentLabel.text = ""
-        
-        self.commentLabel.adjustsFontSizeToFitWidth = true
         
         self.appendRefreshButton(#selector(BarcodeReaderExtViewController.refreshBarcodeReader))
         
@@ -58,10 +52,10 @@ class BarcodeReaderExtViewController: CommonViewController, StarIoExtManagerDele
             DispatchQueue.main.async {
 //              self.refreshBarcodeReader()
                 
-                self.blind = true
+                self.setBlind(true)
                 
                 defer {
-                    self.blind = false
+                    self.setBlind(false)
                 }
                 
                 self.starIoExtManager.disconnect()
@@ -72,14 +66,11 @@ class BarcodeReaderExtViewController: CommonViewController, StarIoExtManagerDele
                                          buttonTitle: "OK",
                                          buttonStyle: .default,
                                          completion: { _ in
-                                            self.commentLabel.text = """
+                        self.setCommentLabel(text: """
                                             Check the device. (Power and Bluetooth pairing)
                                             Then touch up the Refresh button.
-                                            """
-                                            
-                                            self.commentLabel.textColor = UIColor.red
-                                            
-                                            self.beginAnimationCommantLabel()
+                                            """,
+                                        color: UIColor.red)
                     })
                 }
                 
@@ -92,7 +83,9 @@ class BarcodeReaderExtViewController: CommonViewController, StarIoExtManagerDele
         super.viewWillDisappear(animated)
         
         GlobalQueueManager.shared.serialQueue.async {
-            self.starIoExtManager.disconnect()
+            DispatchQueue.main.async {
+                self.starIoExtManager.disconnect()
+            }
         }
         
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIApplicationWillResignActiveNotification"), object: nil)
@@ -111,7 +104,9 @@ class BarcodeReaderExtViewController: CommonViewController, StarIoExtManagerDele
     
     @objc func applicationWillResignActive() {
         GlobalQueueManager.shared.serialQueue.async {
-            self.starIoExtManager.disconnect()
+            DispatchQueue.main.async {
+                self.starIoExtManager.disconnect()
+            }
         }
     }
     
@@ -152,10 +147,10 @@ class BarcodeReaderExtViewController: CommonViewController, StarIoExtManagerDele
     }
     
     @objc func refreshBarcodeReader() {
-        self.blind = true
+        self.setBlind(true)
         
         defer {
-            self.blind = false
+            self.setBlind(false)
         }
         
         self.cellArray.removeAllObjects()
@@ -168,33 +163,18 @@ class BarcodeReaderExtViewController: CommonViewController, StarIoExtManagerDele
                                  buttonTitle: "OK",
                                  buttonStyle: .default,
                                  completion: { _ in
-                                    self.commentLabel.text = """
+                self.setCommentLabel(text: """
                                     Check the device. (Power and Bluetooth pairing)
                                     Then touch up the Refresh button.
-                                    """
-                                    
-                                    self.commentLabel.textColor = UIColor.red
-                                    
-                                    self.beginAnimationCommantLabel()
+                                    """,
+                                color: UIColor.red)
             })
         }
         
         self.tableView.reloadData()
     }
     
-    func didBarcodeDataReceive(_ manager: StarIoExtManager!, data: Data!) {
-        NSLog("%@", MakePrettyFunction())
-        
-        guard let str = String(data: data, encoding: .ascii) else {
-            return
-        }
-        
-        var lines = [String]()
-        
-        str.enumerateLines { (line, stop) -> () in
-            lines.append(line)
-        }
-        
+    func addListBarcodeData(_ lines: [String]){
         for bcrStr in lines {
             if self.cellArray.count > 30 {     // Max.30Line
                 self.cellArray.removeObject(at: 0)
@@ -214,84 +194,76 @@ class BarcodeReaderExtViewController: CommonViewController, StarIoExtManagerDele
         self.tableView.deselectRow(at: indexPath, animated:true)
     }
     
-    func didBarcodeReaderImpossible(_ manager: StarIoExtManager!) {
+    nonisolated func didBarcodeDataReceive(_ manager: StarIoExtManager!, data: Data!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Barcode Reader Impossible."
+        guard let str = String(data: data, encoding: .ascii) else {
+            return
+        }
         
-        self.commentLabel.textColor = UIColor.red
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            var lines = [String]()
+            
+            str.enumerateLines { (line, stop) -> () in
+                lines.append(line)
+            }
+            await self.addListBarcodeData(lines)
+        }
     }
     
-    func didBarcodeReaderConnect(_ manager: StarIoExtManager!) {
+    nonisolated func didBarcodeReaderImpossible(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Barcode Reader Connect."
-        
-        self.commentLabel.textColor = UIColor.blue
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Barcode Reader Impossible.", color: UIColor.red)
+        }
     }
     
-    func didBarcodeReaderDisconnect(_ manager: StarIoExtManager!) {
+    nonisolated func didBarcodeReaderConnect(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Barcode Reader Disconnect."
-        
-        self.commentLabel.textColor = UIColor.red
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Barcode Reader Connect.", color: UIColor.blue)
+        }
     }
     
-    func didAccessoryConnectSuccess(_ manager: StarIoExtManager!) {
+    nonisolated func didBarcodeReaderDisconnect(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Accessory Connect Success."
-        
-        self.commentLabel.textColor = UIColor.blue
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Barcode Reader Disconnect.", color: UIColor.red)
+        }
     }
     
-    func didAccessoryConnectFailure(_ manager: StarIoExtManager!) {
+    nonisolated func didAccessoryConnectSuccess(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Accessory Connect Failure."
-        
-        self.commentLabel.textColor = UIColor.red
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Accessory Connect Success.", color: UIColor.blue)
+        }
     }
     
-    func didAccessoryDisconnect(_ manager: StarIoExtManager!) {
+    nonisolated func didAccessoryConnectFailure(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-        self.commentLabel.text = "Accessory Disconnect."
-        
-        self.commentLabel.textColor = UIColor.red
-        
-        self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Accessory Connect Failure.", color: UIColor.red)
+        }
     }
     
-    func didStatusUpdate(_ manager: StarIoExtManager!, status: String!) {
+    nonisolated func didAccessoryDisconnect(_ manager: StarIoExtManager!) {
         NSLog("%@", MakePrettyFunction())
         
-//      self.commentLabel.text = status
-//
-//      self.commentLabel.textColor = UIColor.green
-//
-//      self.beginAnimationCommantLabel()
+        Task {
+            await self.setCommentLabel(text: "Accessory Disconnect.", color: UIColor.red)
+        }
     }
     
-    fileprivate func beginAnimationCommantLabel() {
-        self.commentLabel.alpha = 0.0
+    nonisolated func didStatusUpdate(_ manager: StarIoExtManager!, status: String!) {
+        NSLog("%@", MakePrettyFunction())
         
-        UIView.animate(withDuration: 0.6,
-                       delay: 0,
-                       options: [.repeat, .autoreverse, .curveEaseIn],
-                       animations: {
-            self.commentLabel.alpha = 1.0
-        })
+        Task {
+//            await self.setCommentLabel(text: status, color: UIColor.green)
+        }
     }
 }

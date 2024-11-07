@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BluetoothSettingViewController: CommonViewController, UITableViewDelegate, UITableViewDataSource,  TextViewTableViewCellDelegate, SwitchTableViewCellDelegate {
+class BluetoothSettingViewController: CommonViewController, UITableViewDelegate, UITableViewDataSource, TextViewTableViewCellDelegate, SwitchTableViewCellDelegate {
     enum CellParamIndex: Int {
         case titleIndex = 0
     }
@@ -421,13 +421,13 @@ class BluetoothSettingViewController: CommonViewController, UITableViewDelegate,
         switch indexPath.row {
         case 2 :
             self.bluetoothManager.autoConnect = on
-//      case 4 :
+            //      case 4 :
         default:
             self.changePinCode = on
         }
         
-        self.applyButton.isEnabled = validateStringSettings()
-
+        self.applyButton.isEnabled = self.validateStringSettings()
+        
         self.tableView.reloadData()
     }
     
@@ -449,10 +449,10 @@ class BluetoothSettingViewController: CommonViewController, UITableViewDelegate,
     }
     
     func getFirmwareInformation() -> (String, String)? {
-        self.blind = true
-        
+        self.setBlind(true)
+
         defer {
-            self.blind = false
+            self.setBlind(false)
         }
         
         var port : SMPort
@@ -490,10 +490,10 @@ class BluetoothSettingViewController: CommonViewController, UITableViewDelegate,
     }
     
     @objc func loadSettings() {
-        self.blind = true
-        
+        self.setBlind(true)
+
         defer {
-            self.blind = false
+            self.setBlind(false)
         }
         
         if (self.bluetoothManager.open() == false) {
@@ -589,10 +589,10 @@ class BluetoothSettingViewController: CommonViewController, UITableViewDelegate,
             return
         }
         
-        self.blind = true
-        
+        self.setBlind(true)
+
         defer {
-            self.blind = false
+            self.setBlind(false)
         }
         
         if (self.bluetoothManager.open() == false) {

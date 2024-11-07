@@ -287,8 +287,8 @@ class ApiViewController: CommonViewController, UITableViewDelegate, UITableViewD
         let portName:     String = AppDelegate.getPortName()
         let portSettings: String = AppDelegate.getPortSettings()
         
-        self.blind = true
-        
+        self.setBlind(true)
+
         GlobalQueueManager.shared.serialQueue.async {
             _ = Communication.sendCommands(commands,
                                            portName: portName,
@@ -301,7 +301,7 @@ class ApiViewController: CommonViewController, UITableViewDelegate, UITableViewD
                                                                      buttonTitle: "OK",
                                                                      buttonStyle: .cancel)
                                                 
-                                                self.blind = false
+                                                self.setBlind(false)
                                             }
             })
         }

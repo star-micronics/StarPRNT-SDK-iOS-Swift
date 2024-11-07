@@ -9,7 +9,7 @@
 import Foundation
 
 class GlobalQueueManager {
-    static let shared = GlobalQueueManager()
+    @MainActor static let shared = GlobalQueueManager()
     
     var serialQueue = DispatchQueue(label: "jp.star-m.swiftsdk")
 }

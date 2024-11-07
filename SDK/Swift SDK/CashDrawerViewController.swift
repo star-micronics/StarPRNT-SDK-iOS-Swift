@@ -93,7 +93,7 @@ class CashDrawerViewController: CommonViewController, UITableViewDelegate, UITab
             let portSettings: String = AppDelegate.getPortSettings()
             let timeout:      UInt32 = 10000                             // 10000mS!!!
             
-            self.blind = true
+            self.setBlind(true)
             
             GlobalQueueManager.shared.serialQueue.async {
                 switch indexPath.row {
@@ -109,7 +109,7 @@ class CashDrawerViewController: CommonViewController, UITableViewDelegate, UITab
                                                                              buttonTitle: "OK",
                                                                              buttonStyle: .cancel)
                                                         
-                                                        self.blind = false
+                                                        self.setBlind(false)
                                                     }
                     })
                 // case 1, 3 :
@@ -125,7 +125,7 @@ class CashDrawerViewController: CommonViewController, UITableViewDelegate, UITab
                                                                                                  buttonTitle: "OK",
                                                                                                  buttonStyle: .cancel)
                                                                             
-                                                                            self.blind = false
+                                                                            self.setBlind(false)
                                                                         }
                                                                         
                     })
