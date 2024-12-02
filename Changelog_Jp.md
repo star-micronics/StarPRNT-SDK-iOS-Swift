@@ -9,6 +9,9 @@
 - Swift6へのアップデート準備
 - サンプルコードの追加
     * TSP100IV-UEWB, TSP100IV-UEWB SKに対応
+- Xcode16とiOS18の組み合わせで、検索はできるが印刷ができない問題を解消いたしました。 [#30](https://github.com/star-micronics/StarPRNT-SDK-iOS-Swift/issues/30)
+    * info.plistにデフォルトでPrivacy -Local Network Usage Descriptionを追加しました。
+    * この問題に対応するためのライブラリの更新は不要です。
 
 StarIO (Ver. 2.12.0)<br>
 StarIO_Extension (Ver. 1.18.0)<br>
