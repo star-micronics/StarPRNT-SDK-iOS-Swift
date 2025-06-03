@@ -4,15 +4,26 @@ This package contains StarPRNT SDK for supporting to develop applications for St
 
 In accordance with Apple's guidelines, StarIO V2.11.1 or later, StarIO_Extension V1.17.1 or later, StarIODeviceSetting V1.0.2 or later include a privacy manifest file.
 Please see [here](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files) for the Manifest file.
-StarIO, StarIO_Extension, uses User defaults APIs. StarIODeviceSetting does not use the Required Reason API. (As of January 29, 2024)
-
+StarIO, StarIO_Extension, uses User defaults APIs. StarIODeviceSetting does not use the Required Reason API. (As of May 19, 2025)
 
 ## Scope
 
 Please refer to the [StarPRNT SDK document](https://www.star-m.jp/starprntsdk-oml-ios.html) for supported OS, development environment, and supported printers.
 
+## important
+
+### Considerations when using mC-Label2
+
+| Printer                             | Paper Size            | DPI                   |
+| ----------------------------------- | --------------------- | --------------------- |
+| mC-Label2                           | 2 inch (576 dots)     | 300dpi                |
+| mC-Print2, mPOP, etc                | 2 inch (384 dots)     | 203dpi                |
+| mC-Label3, mC-Print3, TSP100IV, etc | 3 inch (576 dots)     | 203dpi                |
+
+Due to the differences in DPI above, the sample code based on a "3-inch (576 dots)" paper size will print on a 2-inch paper size in mC-Label2.
 
 ## Limitation
+
 1. Notification in case of SM-L Series
 
     It could take some time when an iOS device tries to connect to a printer via "Bluetooth Low Energy".
@@ -72,4 +83,4 @@ Please refer to the [StarPRNT SDK document](https://www.star-m.jp/starprntsdk-om
 
 ## Copyright
 
-Copyright 2016-2024 Star Micronics Co., Ltd. All rights reserved.
+Copyright 2016-2025 Star Micronics Co., Ltd. All rights reserved.

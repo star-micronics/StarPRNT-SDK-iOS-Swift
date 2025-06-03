@@ -1,3 +1,20 @@
+# V5.20.0 (2025/05/19)
+
+## StarIOExtension
+- Changed Features
+    * ISCBBuilder Class : Added appendBaseTextMagnification function.
+    * ISCBBuilder Class : Extended SCBBarcodeWidth enum.
+    * ISCBBuilder Class : Changed to allow selection of adding line feed code to the output of AppendCutPaper function.
+
+## SDK
+- Added Sample Codes
+    * Supported mC-Label2.
+
+StarIO (Ver. 2.12.0)<br>
+StarIO_Extension (Ver. 1.19.0)<br>
+stariodevicesetting (Ver. 1.0.2)
+
+
 # V5.19.0 (2024/11/01)
 
 ## StarIO
@@ -9,9 +26,6 @@
 - Preparing to update to Swift6
 - Added Sample Codes
     * Supported TSP100IV-UEWB, TSP100IV-UEWB SK.
-- Fixed a problem with the combination of Xcode16 and iOS18 that would not print even if the search was successful. [#30](https://github.com/star-micronics/StarPRNT-SDK-iOS-Swift/issues/30)
-    * Added Privacy -Local Network Usage Description to info.plist by default.
-    * Note: No library update is required to solve this issue.
 
 StarIO (Ver. 2.12.0)<br>
 StarIO_Extension (Ver. 1.18.0)<br>

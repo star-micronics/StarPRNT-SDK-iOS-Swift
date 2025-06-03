@@ -8,6 +8,6 @@ use_frameworks!
 
 # Pods for Swift SDK
 pod 'StarIO', '2.12.0'
-pod 'StarIO_Extension', '1.18.0'
+pod 'StarIO_Extension', '1.19.0'
 
 end

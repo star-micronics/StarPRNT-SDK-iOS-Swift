@@ -4,11 +4,23 @@
 
 Apple社の指針に従い、StarIO V2.11.1以降, StarIO_Extension V1.17.1以降, StarIODeviceSetting V1.0.2以降はプライバシーマニフェストファイルを含みます。
 Manifest fileについては[こちら](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files)をご参照ください。
-StarIO、StarIO_ExtensionはUser defaults APIsを使用しています。StarIODeviceSettingはRequired Reason APIを使用していません。(2024年1月29日現在)
+StarIO、StarIO_ExtensionはUser defaults APIsを使用しています。StarIODeviceSettingはRequired Reason APIを使用していません。(2025年5月19日現在)
 
 ## 適用
 
 対応OS・開発環境・対応プリンターについては、[StarPRNT SDKの開発者向けドキュメント](https://www.star-m.jp/starprntsdk-oml-ios.html)を参照ください。
+
+## 重要事項
+
+### mC-Label2を使用する際の留意点
+
+| プリンタ                              | 用紙サイズ             | DPI                   |
+| ------------------------------------- | --------------------- | --------------------- |
+| mC-Label2                             | 2インチ (576ドット)    | 300dpi                |
+| mC-Print2、mPOP、その他                | 2インチ (384ドット)    | 203dpi                |
+| mC-Label3、mC-Print3、TSP100IV、その他 | 3インチ (576ドット)    | 203dpi                |
+
+上記の解像度の違いにより、mC-Label2では「3インチ (576ドット)」の用紙サイズに基づいたサンプルコードを使用すると、2インチの用紙サイズで印刷されます。
 
 ## 制限事項
 
@@ -62,4 +74,4 @@ StarIO、StarIO_ExtensionはUser defaults APIsを使用しています。StarIOD
 
 ## 著作権
 
-スター精密（株）Copyright 2016 - 2024
+スター精密（株）Copyright 2016 - 2025

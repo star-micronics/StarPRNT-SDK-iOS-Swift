@@ -1,3 +1,20 @@
+# Ver 5.20.0 (2025/05/19)
+
+## StarIOExtension
+- 機能追加
+    * ISCBBuilderクラス : appendTextBaseMagnificationメソッドを追加
+    * ISCBBuilderクラス : SCBBarcodeWidthの列挙型を拡張
+    * ISCBBuilderクラス : appendCutPaperメソッドの出力に改行コードの付与を選択可能に変更
+
+## SDK
+- サンプルコードの追加
+    * mC-Label2に対応
+
+StarIO (Ver. 2.12.0)<br>
+StarIO_Extension (Ver. 1.19.0)<br>
+stariodevicesetting (Ver. 1.0.2)
+
+
 # Ver.5.19.0 (2024/11/01)
 
 ## StarIO
@@ -9,9 +26,6 @@
 - Swift6へのアップデート準備
 - サンプルコードの追加
     * TSP100IV-UEWB, TSP100IV-UEWB SKに対応
-- Xcode16とiOS18の組み合わせで、検索はできるが印刷ができない問題を解消いたしました。 [#30](https://github.com/star-micronics/StarPRNT-SDK-iOS-Swift/issues/30)
-    * info.plistにデフォルトでPrivacy -Local Network Usage Descriptionを追加しました。
-    * この問題に対応するためのライブラリの更新は不要です。
 
 StarIO (Ver. 2.12.0)<br>
 StarIO_Extension (Ver. 1.18.0)<br>
@@ -72,6 +86,7 @@ stariodevicesetting (Ver. 1.0.1)
 
 StarIO (Ver. 2.11.0)<br>
 StarIO_Extension (Ver. 1.17.0)
+stariodevicesetting (Ver. 1.0.1)
 
 
 # Ver.5.16.2 (2023/08/09)
@@ -111,6 +126,10 @@ stariodevicesetting (Ver. 1.0.1)
 - Static LibraryからEmbedded Frameworkに変更
 - Frameworkがbitcodeを含まないよう変更
 
+StarIO (Ver. 2.10.0)<br>
+StarIO_Extension (Ver. 1.17.0)<br>
+stariodevicesetting (Ver. 1.0.1)
+
 
 # Ver.5.15.1 (2022/05/10)
 
@@ -121,6 +140,7 @@ stariodevicesetting (Ver. 1.0.1)
 StarIO (Ver. 2.9.1)<br>
 StarIO_Extension (Ver. 1.16.0)<br>
 stariodevicesetting (Ver. 1.0.1)
+
 
 # Ver.5.15.0 (2021/10/29)
 
@@ -149,6 +169,7 @@ stariodevicesetting (Ver. 1.0.1)
 StarIO (Ver. 2.9.0)<br>
 StarIO_Extension (Ver. 1.16.0)<br>
 stariodevicesetting (Ver. 1.0.1)
+
 
 # Ver.5.14.2 (2020/12/09)
 

@@ -12,6 +12,7 @@ enum ModelIndex: Int {     // Don't insert(Only addition)
     case none = 0
     case mCPrint2
     case mCPrint3
+    case mCLabel2
     case mCLabel3
     case mpop
     case fvp10
@@ -135,6 +136,7 @@ class ModelCapability : NSObject {
     static let modelIndexArray: [ModelIndex] = [
         ModelIndex.mCPrint2,
         ModelIndex.mCPrint3,
+        ModelIndex.mCLabel2,
         ModelIndex.mCLabel3,
         ModelIndex.mpop,
         ModelIndex.fvp10,
@@ -168,6 +170,9 @@ class ModelCapability : NSObject {
         .mCPrint3: PrinterInfo("mC-Print3", .starPRNT, true, "", ["MCP30 (STR-001)", "MCP31"],
                                true, true, true, true, false, false, true, false, true,
                                true, true, true, true, true, false),
+        .mCLabel2: PrinterInfo("mC-Label2", .starPRNT, false, "", ["MCL21 (STR-001)", "MCL21"],
+                               true, true, true, true, true, true, true, true, true,
+                               false, true, true, false, true, false),
         .mCLabel3: PrinterInfo("mC-Label3", .starPRNT, true, "", ["MCL32 (STR-001)", "MCL32"],
                                true, true, true, true, true, true, true, true, true,
                                true, true, true, false, true, false),

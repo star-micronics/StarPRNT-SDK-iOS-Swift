@@ -167,6 +167,12 @@ typedef NS_ENUM(NSUInteger, SCBBarcodeWidth) {
     SCBBarcodeWidthMode7,
     SCBBarcodeWidthMode8,
     SCBBarcodeWidthMode9,
+    SCBBarcodeWidthMode10,
+    SCBBarcodeWidthMode11,
+    SCBBarcodeWidthMode12,
+    SCBBarcodeWidthMode13,
+    SCBBarcodeWidthMode14,
+    SCBBarcodeWidthMode15,
     SCBBarcodeWidthExtMode1,
     SCBBarcodeWidthExtMode2,
     SCBBarcodeWidthExtMode3,
@@ -263,6 +269,14 @@ typedef NS_ENUM(NSInteger, SCBLabelType) {
     SCBLabelTypeValid,
     SCBLabelTypeValidWithDetection
 };
+
+#pragma mark - Base Magnification
+
+typedef NS_ENUM(NSInteger, SCBBaseMagnificationType) {
+    SCBBaseMagnificationTypeStandard,
+    SCBBaseMagnificationTypeX1_5,
+};
+
 
 @interface ISCBBuilder : NSObject
 
@@ -434,6 +448,9 @@ typedef NS_ENUM(NSInteger, SCBLabelType) {
 #pragma mark - CutPaper
 
 - (void)appendCutPaper:(SCBCutPaperAction)action;
+
+- (void)appendCutPaper:(SCBCutPaperAction)action
+          withLineFeed:(BOOL)withLineFeed;
 
 #pragma mark - Peripheral
 
@@ -679,6 +696,11 @@ typedef NS_ENUM(NSInteger, SCBLabelType) {
 #pragma mark - Label
 
 - (void)appendLabel:(SCBLabelType)type;
+
+#pragma mark - Base Magnification
+
+- (void)appendTextBaseMagnification:(SCBBaseMagnificationType)type;
+
 
 #pragma mark - PageMode
 

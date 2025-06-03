@@ -218,6 +218,10 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
                 self.paperSizeIndex = nil
             }
             
+            if (modelIndex == ModelIndex.mCLabel2) {
+                self.paperSizeIndex = .threeInch
+            }
+            
             if (selectedPrinterIndex != 0) {
                 self.paperSizeIndex = AppDelegate.settingManager.settings[0]?.selectedPaperSize
             }
@@ -365,6 +369,10 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
                 self.paperSizeIndex = nil
             }
             
+            if (modelIndex == ModelIndex.mCLabel2) {
+                self.paperSizeIndex = .threeInch
+            }
+ 
             if (selectedPrinterIndex != 0) {
                 self.paperSizeIndex = AppDelegate.settingManager.settings[0]?.selectedPaperSize
             }
@@ -439,6 +447,10 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
             self.paperSizeIndex = nil
         }
         
+        if (modelIndex == ModelIndex.mCLabel2) {
+            self.paperSizeIndex = .threeInch
+        }
+     
         if (selectedPrinterIndex != 0) {
             self.paperSizeIndex = AppDelegate.settingManager.settings[0]?.selectedPaperSize
         }
