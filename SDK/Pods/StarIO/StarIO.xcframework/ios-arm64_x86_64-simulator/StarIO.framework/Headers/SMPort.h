@@ -40,8 +40,8 @@
     BOOL checkedBlockSupport;
 }
 
-@property(assign, nonatomic) NSString *name;
-@property(assign, nonatomic) NSString *identifier;
+@property(readonly, nonatomic) NSString *name;
+@property(readonly, nonatomic) NSString *identifier;
 
 @property(nonatomic) NSUInteger connectionID;
 

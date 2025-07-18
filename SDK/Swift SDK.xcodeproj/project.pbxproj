@@ -605,7 +605,7 @@
 				INFOPLIST_FILE = "Swift SDK/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.20.0;
+				MARKETING_VERSION = 5.20.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.stariosdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -634,7 +634,7 @@
 				INFOPLIST_FILE = "Swift SDK/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.20.0;
+				MARKETING_VERSION = 5.20.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.stariosdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

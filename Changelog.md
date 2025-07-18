@@ -1,3 +1,15 @@
+# V5.20.1 (2025/07/14)
+
+## StarIO
+- Fixed the attributes of some properties of SMPort class properly.
+
+## StarIOExtension
+- Minor fixes that do not affect operation.
+
+StarIO (Ver. 2.12.1)<br>
+StarIO_Extension (Ver. 1.19.1)<br>
+stariodevicesetting (Ver. 1.0.2)
+
 # V5.20.0 (2025/05/19)
 
 ## StarIOExtension

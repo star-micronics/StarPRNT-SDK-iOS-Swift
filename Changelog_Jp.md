@@ -1,3 +1,15 @@
+# Ver 5.20.1 (2025/07/14)
+
+## StarIO
+- SMPortクラスの一部プロパティの属性を適切に修正
+
+## StarIOExtension
+- 動作に影響しない軽微な修正
+
+StarIO (Ver. 2.12.1)<br>
+StarIO_Extension (Ver. 1.19.1)<br>
+stariodevicesetting (Ver. 1.0.2)
+
 # Ver 5.20.0 (2025/05/19)
 
 ## StarIOExtension

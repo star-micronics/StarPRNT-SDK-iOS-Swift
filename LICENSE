@@ -4,32 +4,31 @@
 I.General Terms and Conditions
 
 This General License Agreement ("Agreement") made and entered into by and between you and Star Micronics Co., Ltd. and/or its subsidiaries (hereinafter collectively referred to as "Star") stipulates the terms and conditions pertaining to the licensing of the software (including all related documentation and accompanying data furnished by Star, hereinafter referred to as "the Software"). This Agreement does not apply to any software, firmware or cloud services that are separately licensed or provided pursuant to a separate agreement with Star.
-If you are entering into this Agreement on behalf of a business or other legal entity, you represent that you have the authority to bind such entity to this Agreement, in which case the terms, “you“，or “your” shall refer to such entity.
+If you are entering into this Agreement on behalf of a business or other legal entity, you represent that you have the authority to bind such entity to this Agreement, in which case the terms, “you“ or “your” shall refer to such entity.
 Please read this Agreement carefully before installing or using the Software. By Clicking the “Agree” Button or by installing and using the Software, you
-(a)	acknowledge that you have read and understand this Agreement; 
-(b)	represent that you are 18 years of age or older/of legal age to enter into a binding Agreement; and
-(c)	accept this Agreement and agree that you are legally bound by its terms.
+(a) acknowledge that you have read and understand this Agreement;
+(b) represent that you are 18 years of age or older/of legal age to enter into a binding Agreement; and
+(c) accept this Agreement and agree that you are legally bound by its terms.
 If you do not agree to the terms of this Agreement, you are not entitled to install the Software.
 
-
 1. Permitted License Uses
-During the terms of this Agreement, Star grants you a nonexclusive, non-transferable license to:
-(a)	download, install and use a single copy of the Software
+During the terms of this Agreement, Star grants to you a nonexclusive, non-transferable license to:
+(a) download, install and use a single copy of the Software
 (i) for your own internal business operations on a single compatible device owned or otherwise controlled by you (hereinafter referred to as "Device") strictly in accordance with the Software's documentation for communication with the compatible Star product you purchased (hereinafter referred to as “Star Product”);
-(ii)For your own internal business operations on the Star Product on which the Software was first installed, or Star Product for which the Software was first made available by Star for use with, for production operation or, on a temporary basis, consistent with the limitations specified or referenced in this Agreement and the Software documentation;
-(b)	to copy the Software for installation, archival or backup purposes, and to make a sufficient number of copies for the intended use described in the Software documentation, provided that all titles and trademark, copyright and restricted rights notices are reproduced on all such copies.
+(ii) For your own internal business operations on the Star Product on which the Software was first installed, or Star Product for which the Software was first made available by Star for use with, for production operation or, on a temporary basis, consistent with the limitations specified or referenced in this Agreement and the Software documentation;
+(b) to copy the Software for installation, archival or backup purposes, and to make a sufficient number of copies for the intended use described in the Software documentation, provided that all titles and trademark, copyright and restricted rights notices are reproduced on all such copies.
 
-2. Restrictions on Permitted License Uses 
-Unless otherwise provided in this Agreement, You may not 
-(a)reverse engineer, disassemble, or decompile with regard to the Software or otherwise attempt to discover the trade secrets in the Software;
-(b)copy, reproduce, alter, modify or create derivative works of the Software any part thereof ;
-(c)sublicense, transfer, rent, lease, or redistribute the Software to a third party;
-(d)use the Software for a purpose other than those specified in the preceding article.
-(e)remove, delete, alter or obscure any trademarks or any copyright, trademark, patent or other intellectual property or proprietary rights notices from the Software, including any copy thereof;
-(f)remove, disable, circumvent or otherwise create or implement any workaround to any copy protection, rights management or security features in or protecting the Software.
+2. Restrictions on Permitted License Uses
+Unless otherwise provided in this Agreement, You may not
+(a) reverse engineer, disassemble, or decompile with regard to the Software or otherwise attempt to discover the trade secrets in the Software;
+(b) copy, reproduce, alter, modify or create derivative works of the Software any part thereof ;
+(c) sublicense, transfer, rent, lease, or redistribute the Software to a third party;
+(d) use the Software for a purpose other than those specified in the preceding article.
+(e) remove, delete, alter or obscure any trademarks or any copyright, trademark, patent or other intellectual property or proprietary rights notices from the Software, including any copy thereof;
+(f) remove, disable, circumvent or otherwise create or implement any workaround to any copy protection, rights management or security features in or protecting the Software.
 
 3.Reservation of Rights.
-You acknowledge and agree that the Software is provided under license, and not sold, assigned, or transferred to you. You do not acquire any ownership interest in the Software under this Agreement, or any other rights thereto other than to use the Software in accordance with the license granted, and subject to all terms, conditions and restrictions, under this Agreement. Star reserves and shall retain its entire right, title and interest in and to the Software, including all copyrights, trademarks and other intellectual property rights therein or relating thereto, except as expressly granted to you in this Agreement. 
+You acknowledge and agree that the Software is provided under license, and not sold, assigned, or transferred to you. You do not acquire any ownership interest in the Software under this Agreement, or any other rights thereto other than to use the Software in accordance with the license granted, and subject to all terms, conditions and restrictions, under this Agreement. Star reserves and shall retain its entire right, title and interest in and to the Software, including all copyrights, trademarks and other intellectual property rights therein or relating thereto, except as expressly granted to you in this Agreement.
 
 4.Collection and Use of Your Information. 
 You acknowledge that when you download, install or use the Software, Star may use automatic means to collect information about your Star Product and Device and about your use of the Application for our internal business purposes and maintaining, servicing, and improving the Star Product and Applications.
@@ -59,10 +58,10 @@ The Software may be subject to laws and regulations including the “Foreign Exc
 
 11.Confidentiality
 You shall not or divulge any of Star’s technical, business, or other operational information (hereinafter referred to as "Confidential Information") that you learn in connection with this Agreement or the use of the Software and shall use the Confidential Information only for purposes directly related to the use of the Software. However, Confidential Information does not include any information which:
-(a)	was in the public domain at the time of disclosure;
-(b)	Was already known to the recipient at the time of disclosure;
-(c)	was Lawfully received from a third party without any obligation of confidentially 
-(d)	is independently developed without using the Confidential Information
+(a) was in the public domain at the time of disclosure;
+(b) Was already known to the recipient at the time of disclosure;
+(c) was Lawfully received from a third party without any obligation of confidentially
+(d) is independently developed without using the Confidential Information
 
 12. Third-party Software
 If the whole or part of the Software includes any third-party software or intellectual property right including, but not limited to, open source software (hereinafter referred to as the "Third-party Software"), you shall comply with the terms and conditions of the license granted by the third party related to your use of the Third-party Software. In no event shall any of the provisions of this Agreement be construed as a limitation on the right of the third party to enforce each and every terms and conditions of the license. In no event shall Star be liable for any limitation on the use of the Software, which might be imposed by enforcement of the license by the third party. If the Software includes the Third-party Software, you will find the particulars thereof including the licensing conditions in the "SoftwareLicenseAgreementAppendix.pdf" or other documentation provided by Star. All Third-party Software is provided as-is, with all faults and without warranties of any kind.
@@ -80,19 +79,24 @@ No failure to exercise, and no delay in exercising, on the part of either party,
 If you fail to comply with any term of this Agreement, Star has the right to terminate this Agreement and any other agreement made with you and claim compensation for damages suffered resulting from such termination.
 
 17. Amendment and Alteration
-You should be aware that we may change this Agreement at any time. In the event of a change, we will inform you of the change and changed version of this Agreement by displaying it on Star’s website or by other appropriate means. Unless otherwise specified, the changed version of this Agreement shall become effective when displayed on Star’s website. To read our latest Software License Agreement, please visit this page.
+You should be aware that we may change this Agreement at any time. In the event of a change, we will inform you of the change and changed version of this Agreement by displaying it on Star’s website or by other appropriate means. Unless otherwise specified, the changed version of this Agreement shall become effective when displayed on Star’s website. To read our latest Software License Agreement, please visit this page (https://www.star-m.jp/wp-content/uploads/SoftwareLicenseAgreement_web.pdf).
 
 
 
-Ⅱ．Terms and Conditions for Developers (Addendum to the General Terms and Conditions)
+Ⅱ.Terms and Conditions for Developers (Addendum to the General Terms and Conditions)
 
 If you are Star Development partner and the Software contains STAR’s software developer’s tool kit (hereinafter referred to as “SDK“) or API, your use of the SDK and API is governed by the terms of this “Terms and Conditions for Developers” in addition to the I.General Terms and Conditions. In the event of any conflict between the terms of the I.General Terms and Conditions and this Terms and Conditions for Developers, the terms of this Terms and Conditions for Developers shall govern. You should carefully read the following terms and conditions before using the SDK and API provided by STAR.
 The following teams Shall have the following meanings:
-The “SDK” is defined as the downloadable package of libraries, applications, and documentation that you may use solely in connection with development and testing of your software application(hereinafter referred to as “Application”) to enable it to communicate with a Star Product or device, as provided herein (hereinafter referred to as the “Permitted Use”). 
+The “SDK” is defined as the downloadable package of libraries, applications, and documentation that you may use solely in connection with development and testing of your software application(hereinafter referred to as “Application”) to enable it to communicate with a Star Product or device, as provided herein (hereinafter referred to as the “Permitted Use”).
 The “API” is defined as the Application Programing interface information, specifications and documentation provided as a download for your Permitted Use.
 
 1. LICENSE
-Star grants you a limited, non-exclusive, non-transferable license to use the SDK and API, including the human readable code of the SDK (hereinafter referred to as “Source Code”), subject to the terms and restrictions set forth in I.General Terms and Conditionsthis and Terms and Conditions for Developers.
+Star grants you a limited, non-exclusive, non-transferable license to use the SDK and API, including the human readable code of the SDK (hereinafter referred to as “Source Code”), subject to the terms and restrictions set forth in I.General Terms and Conditions and this Terms and Conditions for Developers.
 
-2.Use of Source Code 
-The SDK is licensed to be used on any personal computer or networked machines, provided that the SDK is used only in connection with the Permitted Use. You may use the Source Code internally to engage in the Permitted Use and you may use, modify or merge all or portions of the Source Code with your Application and distribute it only as part of your Application in object code form only. 
+2. Use of Source Code
+The SDK is licensed to be used on any personal computer or networked machines, provided that the SDK is used only in connection with the Permitted Use. You may use the Source Code internally to engage in the Permitted Use and you may use, modify or merge all or portions of the Source Code with your Application and distribute it only as part of your Application in object code form only.
+
+3. Collection and Use of Your Information.
+Please refer to the following for more information on the collection and use of your information. Privacy Policy for SDK: https://www.star-m.jp/prjump/000193.html
+To read our latest Software License Agreement, please visit the following URL.
+https://www.star-m.jp/wp-content/uploads/SoftwareLicenseAgreement_web.pdf
