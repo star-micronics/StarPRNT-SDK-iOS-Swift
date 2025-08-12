@@ -10,6 +10,29 @@ StarIO, StarIO_Extension, uses User defaults APIs. StarIODeviceSetting does not 
 
 Please refer to the [StarPRNT SDK document](https://www.star-m.jp/starprntsdk-oml-ios.html) for supported OS, development environment, and supported printers.
 
+## Installation
+
+### Swift Package Manager
+
+You can add StarPRNT SDK to your project using Swift Package Manager.
+
+1. In Xcode, go to **File > Add Package Dependencies...**
+2. Enter the repository URL: `https://github.com/star-micronics/StarPRNT-SDK-iOS-Swift`
+3. Select the version or branch you want to use
+4. Click **Add Package**
+
+Or add it to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/star-micronics/StarPRNT-SDK-iOS-Swift.git", from: "5.20.1")
+]
+```
+
+### CocoaPods
+
+Please refer to the existing documentation for CocoaPods installation instructions.
+
 ## important
 
 ### Considerations when using mC-Label2
