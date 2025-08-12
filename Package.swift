@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "StarPRNTSDK",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v12)
     ],
