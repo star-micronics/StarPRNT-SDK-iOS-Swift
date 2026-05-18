@@ -1,6 +1,0 @@
-framework module StarIO_Extension {
-  umbrella header "StarIO_Extension.h"
-  export *
-
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module StarIODeviceSetting {
-  umbrella header "StarIODeviceSetting.h"
-  export *
-
-  module * { export * }
-}

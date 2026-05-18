@@ -1,3 +1,11 @@
+# Ver 5.20.3(2026/04/24)
+- Changed the distribution method of the framework from CocoaPods to Swift Package Manager.
+
+StarIO (Ver. 2.12.3)<br>
+StarIO_Extension (Ver. 1.19.3)<br>
+stariodevicesetting (Ver. 1.0.3)
+
+
 # Ver 5.20.2 (2025/09/10)
 
 ## StarIO
